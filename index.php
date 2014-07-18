@@ -1,42 +1,30 @@
 <?php
-// Obtain your access id and secret key here: http://www.seomoz.org/api/keys
-$accessID = "member-53c0767d2c";
-$secretKey = "b37eb0af871a2a3f53d28d72f04eb1d9";
+include 'moz_api_wrapper/bootstrap.php';
 
-// Set your expires for five minutes into the future.
-$expires = time() + 300;
+// Add your accessID here
+$AccessID = 'member-53c0767d2c';
 
-// A new linefeed is necessary between your AccessID and Expires.
-$stringToSign = $accessID."\n".$expires;
+// Add your secretKey here
+$SecretKey = 'b37eb0af871a2a3f53d28d72f04eb1d9';
 
-// Get the "raw" or binary output of the hmac hash.
-$binarySignature = hash_hmac('sha1', $stringToSign, $secretKey, true);
+// Set the rate limit
+$rateLimit = 10;
 
-// We need to base64-encode it and then url-encode that.
-$urlSafeSignature = urlencode(base64_encode($binarySignature));
+$authenticator = new Authenticator();
+$authenticator->setAccessID($AccessID);
+$authenticator->setSecretKey($SecretKey);
+$authenticator->setRateLimit($rateLimit);
 
-// This is the URL that we want link metrics for.
+// URL to query
 $objectURL = "www.towermarketing.net";
 
-// Add up all the bit flags you want returned.
-// Learn more here: http://apiwiki.seomoz.org/categories/api-reference
-$cols = "103079215108";
+// Metrics to retrieve (url_metrics_constants.php)
+$cols = URLMETRICS_COL_DEFAULT;
 
-// Now put your entire request together.
-// This example uses the Mozscape URL Metrics API.
-$requestUrl = "http://lsapi.seomoz.com/linkscape/url-metrics/".urlencode($objectURL)."?Cols=".$cols."&AccessID=".$accessID."&Expires=".$expires."&Signature=".$urlSafeSignature;
+$urlMetricsService = new URLMetricsService($authenticator);
+$response = $urlMetricsService->getUrlMetrics($objectURL, $cols);
 
-// We can easily use Curl to send off our request.
-$options = array(
-	CURLOPT_RETURNTRANSFER => true
-	);
-
-$ch = curl_init($requestUrl);
-curl_setopt_array($ch, $options);
-$content = curl_exec($ch);
-curl_close($ch);
-
-pc( $content );
+pc( $response );
 
 function pc( $stuff )
 {
