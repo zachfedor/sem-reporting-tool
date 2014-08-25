@@ -8,7 +8,8 @@ Version: 1.0
 Author URI: http://www.towermarketing.net
 */
 
-include_once 'include/semreporting.class.php';
+require_once 'include/semreporting.class.php';
+require_once 'include/sem-report-components/framework.php';
 
 $sem_reporting = new SemReporting();
 $sem_reporting->init();
