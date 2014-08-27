@@ -3,11 +3,12 @@ class SemReporting
 {
 	public function init()
 	{	
-		add_shortcode( 'report_tests', array( $this, 'get_data' ) );
+		add_shortcode( 'report_tests', array( $this, 'report_tests' ) );
 	}
 	
 	function report_tests()
 	{
+		echo 'stuff';
 		set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/google-api-php-client/src');
 		
 	}
