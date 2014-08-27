@@ -1,6 +1,6 @@
 <?php
 
-class Keyword extends SimpleHelper
+class Keyword extends SimpleComponent
 {
 	protected $keyword, $from, $to;
 	

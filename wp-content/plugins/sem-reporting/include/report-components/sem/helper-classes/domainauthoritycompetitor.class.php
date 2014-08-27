@@ -1,6 +1,6 @@
 <?php
 
-class DomainAuthorityCompetitor extends SimpleHelper
+class DomainAuthorityCompetitor extends SimpleComponent
 {
 	protected $name, $domain_authority, $change;
 	

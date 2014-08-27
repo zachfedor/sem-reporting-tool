@@ -1,6 +1,6 @@
 <?php
 
-class Visit extends SimpleHelper
+class Visit extends SimpleComponent
 {
 	protected $month_start_date, $type, $num_visits, $percent_change;
 	

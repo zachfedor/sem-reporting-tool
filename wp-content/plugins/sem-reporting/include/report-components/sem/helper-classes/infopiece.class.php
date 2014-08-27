@@ -1,6 +1,6 @@
 <?php
 
-class InfoPiece extends SimpleHelper
+class InfoPiece extends SimpleComponent
 {
 	protected $name, $type, $value;
 	

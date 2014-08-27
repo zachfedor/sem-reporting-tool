@@ -9,7 +9,7 @@ Author URI: http://www.towermarketing.net
 */
 
 require_once 'include/semreporting.class.php';
-require_once 'include/sem-report-components/framework.php';
+require_once 'include/report-components/framework.php';
 
 $sem_reporting = new SemReporting();
 $sem_reporting->init();

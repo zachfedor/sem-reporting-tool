@@ -7,16 +7,11 @@ class SemReporting
 	}
 	
 	function report_tests()
-	{	
-		$domain_authority_competitors = array();
-
-		$domain_authority_competitors[] = new DomainAuthorityCompetitor( 'ez', 32, 15 );
-		$domain_authority_competitors[] = new DomainAuthorityCompetitor( 'syn', 25, 12 );
+	{
 		
-		$domain_authority_component = new DomainAuthorityComponent( 32, $domain_authority_competitors );
 		
 		echo '<pre>';
-		print_r($domain_authority_component->to_serialize());
+		print_r($google_component->to_array());
 		echo '</pre>';
 	}
 	

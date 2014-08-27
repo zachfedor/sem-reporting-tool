@@ -1,6 +1,6 @@
 <?php
 
-class CompetitorLinkMetric extends SimpleHelper
+class CompetitorLinkMetric extends SimpleComponent
 {
 	protected $name, $link, $metrics;
 	

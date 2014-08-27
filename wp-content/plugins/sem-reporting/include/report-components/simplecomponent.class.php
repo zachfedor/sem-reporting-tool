@@ -1,6 +1,6 @@
 <?php
 
-class SimpleReporting
+class SimpleComponent
 {
 	public function to_array()
 	{
@@ -13,12 +13,12 @@ class SimpleReporting
 			if ( is_array( $val ) )
 			{
 				$objs = array();
-				
+
 				foreach ( $val as $sub_val )
 				{
 					$objs[] = $sub_val->to_array();
 				}
-				
+
 				$arr[$key] = $objs;
 			}
 			else

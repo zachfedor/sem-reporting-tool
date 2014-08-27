@@ -1,6 +1,6 @@
 <?php
 
-class CompetitorMention extends SimpleHelper
+class CompetitorMention extends SimpleComponent
 {
 	protected $page_url, $date;
 	
