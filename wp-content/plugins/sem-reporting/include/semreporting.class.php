@@ -11,7 +11,7 @@ class SemReporting
 		
 		
 		echo '<pre>';
-		print_r($google_component->to_array());
+		//print_r($google_component->to_array());
 		echo '</pre>';
 	}
 	
