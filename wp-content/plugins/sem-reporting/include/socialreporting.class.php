@@ -8,8 +8,17 @@ class SocialReporting
 	
 	function generate_report()
 	{
+		$ids = array(
+			'tower'	=>	'ga:32351305'
+			, 'lrrcu'	=>	'ga:61739784'
+			, 'continental'	=>	'ga:6086169'
+			, 'nda'	=>	'ga:75274122'
+		);
+		
+		$id = array_shift( $ids );
+		
 		$googleanalytics_component = new GoogleAnalytics();
-		$googleanalytics_component->get_data();
+		$googleanalytics_component->get_data( $id );
 		
 		//$twitter_component = $this->get_twitter_data();
 		
