@@ -7,18 +7,7 @@ require_once 'Google/Service/Analytics.php';
 class GoogleAnalytics
 {
 	public static function get_data()
-	{
-		$ids = array(
-			'tower'	=>	'ga:32351305'
-			//, 'lrrcu'	=>	'ga:61739784'
-			//, 'continental'	=>	'ga:6086169'
-			//, 'nda'	=>	'ga:75274122'
-		);
-		
-		$metrics = array(
-			'ga:sessions'
-		);
-		
+	{	
 		/************************************************
 		 The following 3 values an befound in the setting
 		for the application you created on  Google
@@ -60,11 +49,26 @@ class GoogleAnalytics
 
 		$start_date = date( 'Y-m-d', strtotime( 'first day of last month' ) );
 		$end_date = date( 'Y-m-d', strtotime( 'last day of last month' ) );
+
+		$ids = array(
+			'tower'	=>	'ga:32351305'
+			, 'lrrcu'	=>	'ga:61739784'
+			, 'continental'	=>	'ga:6086169'
+			, 'nda'	=>	'ga:75274122'
+		);
+		
+		$metrics = array(
+			'ga:sessions'
+			, 'ga:avgSessionDuration'
+			, 'ga:bounceRate'
+			, 'ga:pageviewsPerSession'
+		);
 		
 		//Adding Dimensions
-		$params = array('dimensions' => 'ga:userType');
+		$params = array('dimensions' => 'ga:medium');
 		// requesting the data
-		$data = $service->data_ga->get( implode( $ids ), $start_date,  $end_date, implode( $metrics ), $params );
+		$id = array_shift( $ids );
+		$data = $service->data_ga->get( $id, $start_date,  $end_date, implode( ',', $metrics ), $params );
 		
 		
 		?><html>
@@ -81,7 +85,12 @@ class GoogleAnalytics
 		<?php
 		//printing each row.
 		foreach ($data->getRows() as $row) {	
-			print "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";	
+			print "<tr>";
+				foreach ( $row as $val )
+				{
+					echo "<td>".$val."</td>";
+				}
+			print "</tr>";
 		}
 		
 		//printing the total number of rows
