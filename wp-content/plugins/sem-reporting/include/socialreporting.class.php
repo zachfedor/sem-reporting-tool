@@ -8,17 +8,27 @@ class SocialReporting
 	
 	function generate_report()
 	{
-		$ids = array(
+		$google_analytics_ids = array(
 			'tower'	=>	'ga:32351305'
 			, 'lrrcu'	=>	'ga:61739784'
 			, 'continental'	=>	'ga:6086169'
 			, 'nda'	=>	'ga:75274122'
 		);
 		
-		$id = array_shift( $ids );
+		$google_analytics_id = array_shift( $google_analytics_ids );
 		
-		$googleanalytics_component = new GoogleAnalytics();
-		$googleanalytics_component->get_data( $id );
+		$googleanalytics_component = Google::get_google_analytics_data( $google_analytics_id );
+
+		$youtube_analytics_ids = array(
+			'tower'	=>	'channel==RN49YEulHCg4pFbakZsVMQ'
+			, 'lrrcu'	=>	'ga:61739784'
+			, 'continental'	=>	'ga:6086169'
+			, 'nda'	=>	'ga:75274122'
+		);
+		
+		$youtube_analytics_id = array_shift( $youtube_analytics_ids );
+		
+		$youtube_analytics_component = Google::get_youtube_analytics_data( $youtube_analytics_id );
 		
 		//$twitter_component = $this->get_twitter_data();
 		
@@ -27,50 +37,12 @@ class SocialReporting
 	
 	private function get_facebook_data()
 	{
-		Facebook::get_data();
+		return Facebook::get_data();
 	}
 	
 	private function get_twitter_data()
 	{
-		require_once( __DIR__ . '/wrappers/twitter-api-php-master/TwitterAPIExchange.php');
-		
-		/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
-		$settings = array(
-			'oauth_access_token' => "455221932-oy8lTdWFWz9wVLf9HbDt5SgvQjRMpXzhsUjghaaB",
-			'oauth_access_token_secret' => "VFwPQaMuKiWA95Rby17sn0cNgHcLxVwWZOMZlzV8cffvq",
-			'consumer_key' => "Q49HD2RjoUJqbxgCiAShj9zKx",
-			'consumer_secret' => "ZJXIlqzkOGFOEudq5Ucsg3dZzkykok5bkGnNCO26tFMxDhRoy2"
-		);
-		
-		//set up the twitter api wrapper
-		/** Perform a GET request and echo the response **/
-		/** Note: Set the GET field BEFORE calling buildOauth(); **/
-		$getfield = '?screen_name=towermarketing';
-		$requestMethod = 'GET';
-		$twitter = new TwitterAPIExchange( $settings );
-
-		//get the number of accounts following
-		$url = 'https://api.twitter.com/1.1/followers/ids.json';
-		$followers = $twitter->setGetfield( $getfield )
-			->buildOauth( $url, $requestMethod )
-			->performRequest();
-		
-		$followers = json_decode( $followers );
-		$total_followers = count( $followers->ids );
-		
-		//get the number of accounts following
-		$url = 'https://api.twitter.com/1.1/friends/ids.json';
-		$friends = $twitter->setGetfield( $getfield )
-			->buildOauth( $url, $requestMethod )
-			->performRequest();
-		
-		$following = json_decode( $friends );
-		$total_following = count( $following->ids );
-		
-		//make the twitter report component and return it
-		$twitter_component = new TwitterComponent( $total_followers, $total_following );
-		
-		return $twitter_component;
+		return Twitter::get_data();
 	}
 	
 	function elog( $stuff )

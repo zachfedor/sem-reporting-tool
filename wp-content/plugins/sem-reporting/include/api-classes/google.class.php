@@ -3,25 +3,26 @@ set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/../wrappers/g
 
 require_once 'Google/Client.php';
 require_once 'Google/Service/Analytics.php';
+require_once 'Google/Service/YouTubeAnalytics.php';
 
-class GoogleAnalytics
+class Google
 {
-	public static function get_data( $id )
-	{	
-		$client_id = '908078370210-okbq3rrl5mefhs5o9cb1v48m34t3mbv6.apps.googleusercontent.com';
-		$email_address = '5723237213-2rh9smblhnof7d82ik5i3rb7g5uf383a@developer.gserviceaccount.com';
-		$key_file_location = __DIR__ . '/SEMReporting-2bd114da8850.p12';
-		//password - notasecret
+	//const CLIENT_ID = '908078370210-okbq3rrl5mefhs5o9cb1v48m34t3mbv6.apps.googleusercontent.com';
+	const EMAIL_ADDRESS = '5723237213-2rh9smblhnof7d82ik5i3rb7g5uf383a@developer.gserviceaccount.com';
+	const KEY_FILE_LOCATION = '/SEMReporting-2bd114da8850.p12';//password - notasecret
+	
+	public static function get_google_analytics_data( $id )
+	{
 		
 		$client = new Google_Client();
 		$client->setApplicationName( 'SEMReporting' );
 		
-		$key = file_get_contents( $key_file_location );
+		$key = file_get_contents( __DIR__ . self::KEY_FILE_LOCATION );
 		
-		$scopes ="https://www.googleapis.com/auth/analytics.readonly";
+		$scopes = 'https://www.googleapis.com/auth/analytics.readonly';
 		
 		$cred = new Google_Auth_AssertionCredentials(
-			$email_address
+			self::EMAIL_ADDRESS
 			, array( $scopes )
 			, $key
 		);
@@ -98,8 +99,47 @@ class GoogleAnalytics
 					break;
 			}
 		}
+	}
+	
+	public static function get_youtube_analytics_data( $id )
+	{
+		$client = new Google_Client();
+		$client->setApplicationName( 'SEMReporting' );
+	
+		$key = file_get_contents( __DIR__ . self::KEY_FILE_LOCATION );
+	
+		$scopes = 'https://www.googleapis.com/auth/yt-analytics.readonly';
+	
+		$cred = new Google_Auth_AssertionCredentials(
+			self::EMAIL_ADDRESS
+			, array( $scopes )
+			, $key
+		);
+	
+		$client->setAssertionCredentials( $cred );
+		//if($client->getAuth()->isAccessTokenExpired() )
+		{
+			$client->getAuth()->refreshTokenWithAssertion( $cred );
+			echo $client->getAccessToken();
+		}
+	
+		$service = new Google_Service_YouTubeAnalytics( $client );
 		
-		print_r( $session_info );
-		print_r( $visit_info );
+		$start_date = date( 'Y-m-d', strtotime( 'first day of last month' ) );
+		$end_date = date( 'Y-m-d', strtotime( 'last day of last month' ) );
+		
+		$metrics = array(
+			'views'
+		);
+		
+		$dimensions = array(
+			'ga:medium'
+			, 'ga:hasSocialSourceReferral'
+		);
+		$params = array( 'dimensions' => implode( ',', $dimensions ) );
+		
+		$data = $service->reports->query( $id, $start_date, $end_date, implode( ',', $metrics ));//, $params );
+		
+		print_r($data);
 	}
 }
