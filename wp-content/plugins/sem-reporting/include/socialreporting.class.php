@@ -8,9 +8,12 @@ class SocialReporting
 	
 	function generate_report()
 	{
+		$googleanalytics_component = new GoogleAnalytics();
+		$googleanalytics_component->get_data();
+		
 		//$twitter_component = $this->get_twitter_data();
 		
-		$facebook_component = $this->get_facebook_data();
+		//$facebook_component = $this->get_facebook_data();
 	}
 	
 	private function get_facebook_data()

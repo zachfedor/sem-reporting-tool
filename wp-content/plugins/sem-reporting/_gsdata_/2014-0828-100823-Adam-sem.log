@@ -1,0 +1,8 @@
+2014-08-28 10:08:24: -- Analysis Started by On File Change Incremental
+2014-08-28 10:08:25: Changes: 2, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 345
+2014-08-28 10:08:25: Left to Right: Copy File: 2 
+2014-08-28 10:08:25: == Sync Started by On File Change Incremental
+2014-08-28 10:08:25: Copy Over '/Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/include/api-classes/framework.php' -> 'sftp://tower4.inetuhosted.net/sites/dev-sites/semreporting_stage/htdocs/wp-content/plugins/sem-reporting/include/api-classes/framework.php'
+2014-08-28 10:08:25: Copy Over '/Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/include/socialreporting.class.php' -> 'sftp://tower4.inetuhosted.net/sites/dev-sites/semreporting_stage/htdocs/wp-content/plugins/sem-reporting/include/socialreporting.class.php'
+2014-08-28 10:08:26: == Sync Complete. Time: 00:00:01, Speed: 8.2 KB/s, OK: 2, Errors: 0
+2014-08-28 10:08:27: 

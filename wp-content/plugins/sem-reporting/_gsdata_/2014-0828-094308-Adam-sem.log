@@ -1,0 +1,342 @@
+2014-08-28 09:43:10: -- Analysis Started by On File Change Incremental
+2014-08-28 09:43:10: /assets: Conflict: New files that differ
+2014-08-28 09:43:10: /assets/images: Conflict: New files that differ
+2014-08-28 09:43:10: /assets/images/loader.gif: Conflict: New files that differ
+2014-08-28 09:43:10: /assets/js: Conflict: New files that differ
+2014-08-28 09:43:10: /assets/js/sem-reporting.js: Conflict: New files that differ
+2014-08-28 09:43:10: /include: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/framework.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/competitorlinkmetricscomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/competitormentionscomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/domainauthoritycomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/competitorlinkmetric.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/competitormention.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/domainauthoritycompetitor.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/infopiece.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/keyword.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/helper-classes/visit.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/otherinfocomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/rankinghighlightscomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/sem/visitscomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/simplecomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/facebookcomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/googleanalyticscomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/helper-classes: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/helper-classes/facebookpost.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/helper-classes/linkedinpoststats.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/helper-classes/youtubedemographics.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/linkedincomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/pinterestcomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/twittercomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/report-components/social/youtubecomponent.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/socialreporting.class.php: Conflict: New files that differ
+2014-08-28 09:43:10: /index.php: Conflict: New files that differ
+2014-08-28 09:43:10: /include/api-classes: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/api-classes/facebook.class.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/api-classes/framework.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/api-classes/googleanalytics.class.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/autoload.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/composer.json: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/CONTRIBUTING.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookCanvasLoginHelper.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookJavaScriptLoginHelper.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookRedirectLoginHelper.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookRequest.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookRequestException.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookResponse.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/FacebookSession.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/GraphObject.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/post_links.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/retrieve_user_profile.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/sdk_getting_started.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/sdk_landing_page.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/docs/upload_photo.fbmd: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/LICENSE: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/phpunit.xml.dist: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/README.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/Entities: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/Entities/AccessToken.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/Entities/SignedRequest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookAuthorizationException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookCanvasLoginHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookClientException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookJavaScriptLoginHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookOtherException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookPageTabHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookPermissionException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookRedirectLoginHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookRequest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookRequestException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookResponse.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookSDKException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookServerException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookSession.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookSignedRequestFromInputHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/FacebookThrottleException.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphAlbum.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphLocation.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphObject.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphPage.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphSessionInfo.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphUser.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/GraphUserPage.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookCurl.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookCurlHttpClient.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookGuzzleHttpClient.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookHttpable.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookStream.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/FacebookStreamHttpClient.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/src/Facebook/HttpClients/fb_ca_chain_bundle.crt: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/bootstrap.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/Entities: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/Entities/AccessTokenTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/Entities/SignedRequestTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookCanvasLoginHelperTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookJavaScriptLoginHelperTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookPageTabHelperTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookRedirectLoginHelperTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookRequestExceptionTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookRequestTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookSessionTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookSignedRequestFromInputHelperTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookTestCredentials.php.dist: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/FacebookTestHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/GraphAlbumTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/GraphLocationTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/GraphObjectTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/GraphSessionInfoTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/GraphUserTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/HttpClients: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/HttpClients/AbstractTestHttpClient.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/HttpClients/FacebookCurlHttpClientTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/HttpClients/FacebookGuzzleHttpClientTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/facebook-php-sdk-v4-4.0-dev/tests/HttpClients/FacebookStreamHttpClientTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/composer.json: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/CONTRIBUTING.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/appengineauth.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/batch.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/fileupload.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/idtoken.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/index.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/key.p12: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/multi-api.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/service-account.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/simple-query.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/simplefileupload.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/styles: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/styles/style.css: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/templates: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/templates/base.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/examples/user-example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/LICENSE: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/README.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/Abstract.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/AppIdentity.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/AssertionCredentials.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/Exception.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/LoginTicket.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/OAuth2.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Auth/Simple.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/Abstract.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/Apc.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/Exception.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/File.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/Memcache.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Cache/Null.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Client.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Collection.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Config.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Exception.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http/Batch.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http/CacheParser.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http/MediaFileUpload.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http/Request.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Http/REST.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO/Abstract.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO/cacerts.pem: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO/Curl.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO/Exception.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/IO/Stream.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Model.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AdExchangeBuyer.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AdExchangeSeller.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Admin.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AdSense.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AdSenseHost.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Analytics.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AndroidPublisher.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Appsactivity.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/AppState.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Audit.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Autoscaler.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Bigquery.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Blogger.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Books.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Calendar.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/CivicInfo.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/CloudMonitoring.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Compute.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Coordinate.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Customsearch.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Datastore.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Dfareporting.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Directory.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Dns.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/DoubleClickBidManager.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Doubleclicksearch.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Drive.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Exception.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Freebase.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Fusiontables.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Games.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/GamesManagement.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Genomics.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Gmail.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/GroupsMigration.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Groupssettings.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/IdentityToolkit.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Licensing.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Manager.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/MapsEngine.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Mirror.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Oauth2.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Orkut.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Pagespeedonline.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Plus.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/PlusDomains.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Prediction.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Pubsub.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/QPXExpress.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Replicapool.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Reports.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Reseller.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Resource.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Resourceviews.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/ShoppingContent.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/SiteVerification.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Spectrum.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/SQLAdmin.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Storage.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Taskqueue.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Tasks.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Translate.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Urlshortener.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/Webfonts.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/YouTube.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service/YouTubeAnalytics.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Signer: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Signer/Abstract.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Signer/P12.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Utils: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Utils/URITemplate.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Utils.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Verifier: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Verifier/Abstract.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/src/Google/Verifier/Pem.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/style: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/style/ruleset.xml: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/adsense: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/adsense/AdSenseTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/AllTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/BaseTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/bootstrap.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiBatchRequestTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiCacheParserTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiClientTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiMediaFileUploadTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiModelTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ApiOAuth2Test.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/AuthTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/CacheTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/GeneralTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/IoTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/RequestTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/RestTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/ServiceTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/cacert.json: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/cacert.pem: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/cert.p12: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/privkey.pem: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/test.ini: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/testdata/test_public_key.pem: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/general/URITemplateTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/OAuthHelper.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/pagespeed: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/pagespeed/AllPageSpeedTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/pagespeed/PageSpeedTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/phpunit.xml: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/plus: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/plus/PlusTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/README: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/tasks: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/tasks/AllTasksTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/tasks/TasksTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/urlshortener: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/urlshortener/AllUrlShortenerTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/urlshortener/UrlShortenerTests.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/youtube: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/google-api-php-client/tests/youtube/YouTubeTest.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/authentication: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/authentication/authenticator.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/bootstrap.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants/anchor_text_constants.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants/links_constants.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants/metadata_constants.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants/top_pages_constants.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/constants/url_metrics_constants.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/anchor_text_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/database_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/link_metrics_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/metadata_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/top_pages_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/examples/url_metrics_example.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/moz.class.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/abstract_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/anchor_text_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/links_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/metadata_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/top_pages_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/services/url_metrics_service.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/utilities: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/utilities/connection_utility.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/moz_api_wrapper/utilities/database_utility.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master/composer.json: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master/index.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master/LICENSE.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master/README.md: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: /include/wrappers/twitter-api-php-master/TwitterAPIExchange.php: Parent folder conflict propagated down to children
+2014-08-28 09:43:10: Analyze has finished with Conflicts. Resolve Conflicts by selecting the correct sync direction, then click Sync
+2014-08-28 09:43:10: Changes: 335, Conflicts: 335, CopyTime: 0, CopyState: 208/5, Errors: 0, All: 558
+2014-08-28 09:43:10: Right to Left: Copy State: 208 
+2014-08-28 09:43:10: == Sync Started by On File Change Incremental
+2014-08-28 09:43:10: 97% (335 / 345) files have changed, more than a threshold of 50%. So the job will not synchronize automatically.
+2014-08-28 09:43:10: 

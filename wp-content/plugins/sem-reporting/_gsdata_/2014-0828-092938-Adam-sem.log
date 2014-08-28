@@ -1,0 +1,12 @@
+2014-08-28 09:29:40: -- Analysis Started by On File Change 1st Full Analyze
+2014-08-28 09:29:40: L: State file does not exist: /Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/_gsdata_/_file_state_v4._gs
+2014-08-28 09:29:46: /include/report-components/simplecomponent.class.php: Conflict: New files that differ
+2014-08-28 09:29:46: /include/socialreporting.class.php: Conflict: New files that differ
+2014-08-28 09:29:46: /index.php: Conflict: New files that differ
+2014-08-28 09:29:46: Analyze has finished with Conflicts. Resolve Conflicts by selecting the correct sync direction, then click Sync
+2014-08-28 09:29:46: Changes: 513, Conflicts: 3, CopyTime: 0, CopyState: 34/0, Errors: 0, All: 557
+2014-08-28 09:29:46: Left to Right: Copy File: 298 
+2014-08-28 09:29:46: Right to Left: Copy File: 212 Copy State: 34 
+2014-08-28 09:29:46: == Sync Started by On File Change 1st Full Analyze
+2014-08-28 09:29:46: 92% (513 / 556) files have changed, more than a threshold of 50%. So the job will not synchronize automatically.
+2014-08-28 09:29:46: 

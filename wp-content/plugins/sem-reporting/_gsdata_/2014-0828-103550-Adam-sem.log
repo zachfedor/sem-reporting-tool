@@ -1,0 +1,15 @@
+2014-08-28 10:35:52: -- Analysis Started by On File Change Incremental
+2014-08-28 10:35:52: Changes: 1, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 345
+2014-08-28 10:35:52: Left to Right: Copy File: 1 
+2014-08-28 10:35:52: == Sync Started by On File Change Incremental
+2014-08-28 10:35:53: Copy Over '/Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/include/socialreporting.class.php' -> 'sftp://tower4.inetuhosted.net/sites/dev-sites/semreporting_stage/htdocs/wp-content/plugins/sem-reporting/include/socialreporting.class.php'
+2014-08-28 10:35:53: Source file has changed during Sync from '[file] size=2207 accu-time=2014-08-28 10:35:45 attr=755' to 'size=2249 time=2014-08-28 10:35:52', will be retried
+2014-08-28 10:35:53: Destination side file adjusted to '[file] size=2207 accu-time=2014-08-28 10:35:49 attr=755', to force retry
+2014-08-28 10:35:53: == Sync Complete. Time: 00:00:01, Speed: 7.8 KB/s, OK: 1, Errors: 0
+2014-08-28 10:35:54: -- Analysis Started by On File Change PostSync Re-Analyze
+2014-08-28 10:35:54: Changes: 1, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 345
+2014-08-28 10:35:54: Left to Right: Copy File: 1 
+2014-08-28 10:35:54: == Sync Started by On File Change PostSync Re-Analyze
+2014-08-28 10:35:55: Copy Over '/Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/include/socialreporting.class.php' -> 'sftp://tower4.inetuhosted.net/sites/dev-sites/semreporting_stage/htdocs/wp-content/plugins/sem-reporting/include/socialreporting.class.php'
+2014-08-28 10:35:55: == Sync Complete. Time: 00:00:01, Speed: 7.8 KB/s, OK: 1, Errors: 0
+2014-08-28 10:35:55: 
