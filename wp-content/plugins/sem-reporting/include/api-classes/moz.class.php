@@ -60,7 +60,7 @@ class Moz
 	private static function get_data( $client )
 	{
 		//get the credentials for the client
-		$client_data = self::get_client_data( $client );
+		$client_data = self::get_client_creds( $client );
 		
 		// Set the rate limit
 		$rateLimit = 10;
@@ -126,7 +126,7 @@ class Moz
 		return $ret_data;
 	}
 	
-	private static function get_client_data( $client )
+	private static function get_client_creds( $client )
 	{
 		$clients = array(
 			'tower'	=>	array(

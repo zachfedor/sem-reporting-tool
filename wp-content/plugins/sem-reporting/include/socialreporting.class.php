@@ -16,10 +16,10 @@ class SocialReporting
 		
 		$google_analytics_id = array_shift( $google_analytics_ids );
 		
-		$googleanalytics_component = Moz::get_competitor_link_metrics_component( 'tower' );
+		$googleanalytics_component = Facebook::get_data( 'tower' );
 		
 		echo '<pre>';
-		print_r($googleanalytics_component->to_array());
+		//print_r($googleanalytics_component->to_array());
 		echo '</pre>';
 	}
 	

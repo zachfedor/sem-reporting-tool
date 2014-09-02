@@ -9,20 +9,19 @@ class Google
 {
 	//const CLIENT_ID = '908078370210-okbq3rrl5mefhs5o9cb1v48m34t3mbv6.apps.googleusercontent.com';
 	const EMAIL_ADDRESS = '5723237213-2rh9smblhnof7d82ik5i3rb7g5uf383a@developer.gserviceaccount.com';
-	const KEY_FILE_LOCATION = '/SEMReporting-2bd114da8850.p12';//password - notasecret
 	
-	public static function get_social_component( $id )
+	public static function get_social_component( $client )
 	{
-		$data = self::get_google_analytics_data( $id );
+		$data = self::get_google_analytics_data( $client );
 		
 		$social_data = $data['social'];
 		
 		return new GoogleAnalyticsComponent( $social_data['total_sessions'], $social_data['sessions_via_social_referral'] );
 	}
 	
-	public static function get_sem_other_info_component( $id )
+	public static function get_sem_other_info_component( $client )
 	{
-		$data = self::get_sem_data( $id );
+		$data = self::get_sem_data( $client );
 
 		$visit_info = $data['visit_info'];
 		$session_info = $data['session_info'];
@@ -30,26 +29,31 @@ class Google
 		return new OtherInfoComponent( $session_info['total'], $session_info['page_views_per'], $session_info['average_duration'], $session_info['bounce_rate'] );
 	}
 	
-	public static function get_social_data( $id )
+	private static function get_social_data( $id )
 	{
 		$data = self::get_google_analytics_data( $id );
 		
 		return $data['social'];
 	}
 	
-	public static function get_sem_data( $id )
+	private static function get_sem_data( $client )
 	{
-		$data = self::get_google_analytics_data( $id );
+		$data = self::get_google_analytics_data( $client );
 		
 		return $data['sem'];
 	}
 	
-	private static function get_google_analytics_data( $id )
-	{	
+	private static function get_google_analytics_data( $client )
+	{
+		$client_data = self::get_client_creds( $client );
+		$client_data = $client_data['analytics'];
+		
+		$id = $client_data['id'];
+		
 		$client = new Google_Client();
 		$client->setApplicationName( 'SEMReporting' );
 		
-		$key = file_get_contents( __DIR__ . self::KEY_FILE_LOCATION );
+		$key = $client_data['key_file_location'];
 		
 		$scopes = 'https://www.googleapis.com/auth/analytics.readonly';
 		
@@ -150,7 +154,7 @@ class Google
 		return $data;
 	}
 	
-	public static function get_youtube_analytics_data( $id )
+	private static function get_youtube_analytics_data( $id )
 	{
 		$client = new Google_Client();
 		$client->setApplicationName( 'SEMReporting' );
@@ -189,5 +193,19 @@ class Google
 		$data = $service->reports->query( $id, $start_date, $end_date, implode( ',', $metrics ) );//, $params );
 		
 		print_r($data);
+	}
+	
+	private static function get_client_creds( $client )
+	{
+		$clients = array(
+			'tower'	=>	array(
+				'analytics'	=>	array(
+					'id'	=>	'ga:32351305'
+					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
+				)
+			)
+		);
+		
+		return $clients[$client];
 	}
 }
