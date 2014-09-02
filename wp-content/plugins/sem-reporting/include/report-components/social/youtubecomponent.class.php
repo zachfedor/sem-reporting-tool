@@ -16,6 +16,27 @@ class YouTubeComponent extends SimpleComponent
 		
 		$this->demographics = $demographics;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		$demographics = array();
+		foreach ( $arr['demographics'] as $demographic )
+		{
+			$demographics[] = new YouTubeDemographics( $demographic['views'], $demographic['estimated_minutes_watched']
+				, $demographic['new_subscribers'], $demographic['likes'], $demographic['dislikes'], $demographic['comments']
+				, $demographic['shares'], $demographic['favorites_added'], $demographic['favorites_removed']
+				, $demographic['age_of_subscribers'] );
+		}
+		
+		return new self( $arr['total_views'], $arr['total_subscribers'], $demographics );
+	}
 
 	public function get_total_views()
 	{

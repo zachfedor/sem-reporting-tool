@@ -76,54 +76,45 @@ class Moz
 		
 		// Metrics to retrieve (url_metrics_constants.php)
 		$cols = URLMETRICS_COL_DOMAIN_AUTHORITY
+			+ URLMETRICS_COL_EXTERNAL_LINKS
+			+ URLMETRICS_COL_ROOTDMN_EXTERNAL_LINKS
 			+ URLMETRICS_COL_ROOTDMN_MOZRANK
-			+ URLMETRICS_COL_ROOTDMN_LINKS
 			+ URLMETRICS_COL_ROOTDMN_MOZTRUST
-			+ 549755813888;//total external links
+			+ 549755813888//total external links
+			+ URLMETRICS_COL_ROOTDMN_LINKS;
 		
 		//get the domain authority for the url
 		$urlMetricsService = new URLMetricsService( $authenticator );
 		$response = $urlMetricsService->getUrlMetrics( $objectURL, $cols );
 
-		$domain_authority = ceil( $response['pda'] );
-		$external_followed_links = '';
-		$followed_linking_root_domains = '';
-		$domain_mozrank = round( $response['pmrp'] * 100 ) / 100;
-		$domain_moztrust = round( $response['ptrp'] * 100 ) / 100;
-		$total_external_links = $response['ued'];
-		$total_linking_root_domains = $response['uipl'];
+
+		$ret_data = self::get_metrics_from_response( $client_data['url'], $response );
 		
 		$domain_authority_competitors = array();
 		foreach ( $client_data['competitors'] as $key => $competitor_url )
 		{
-			$response = $urlMetricsService->getUrlMetrics($competitor_url, $cols);
+			$response = $urlMetricsService->getUrlMetrics( $competitor_url, $cols );
 			
-			$domain_authority_competitor = array(
-				'url'	=>	$competitor_url
-				, 'domain_authority'	=>	ceil( $response['pda'] )
-				, 'external_followed_links'	=>	''
-				, 'followed_linking_root_domains'	=>	''
-				, 'domain_mozrank'	=>	round( $response['pmrp'] * 100 ) / 100
-				, 'domain_moztrust'	=>	round( $response['ptrp'] * 100 ) / 100
-				, 'total_external_links'	=>	''
-				, 'total_linking_root_domains'	=>	$response['uipl']
-			);
-			$domain_authority_competitors[] = $domain_authority_competitor;
+			$domain_authority_competitors[] = self::get_metrics_from_response( $competitor_url, $response );
 		}
 		
-		$ret_data = array(
-			'url'	=>	$client_data['url']
-			, 'domain_authority'	=>	$domain_authority
-			, 'external_followed_links'	=>	$external_followed_links
-			, 'followed_linking_root_domains'	=>	$followed_linking_root_domains
-			, 'domain_mozrank'	=>	$domain_mozrank
-			, 'domain_moztrust'	=>	$domain_moztrust
-			, 'total_external_links'	=>	$total_external_links
-			, 'total_linking_root_domains'	=>	$total_linking_root_domains
-			, 'domain_authority_competitors'	=>	$domain_authority_competitors
-		);
+		$ret_data['domain_authority_competitors'] = $domain_authority_competitors;
 		
 		return $ret_data;
+	}
+	
+	private static function get_metrics_from_response( $url, $response )
+	{
+		return array(
+			'url'	=>	$url
+			, 'domain_authority'	=>	ceil( $response['pda'] )
+			, 'external_followed_links'	=>	$response['ueid']
+			, 'followed_linking_root_domains'	=>	$response['peid']
+			, 'domain_mozrank'	=>	round( $response['pmrp'] * 100 ) / 100
+			, 'domain_moztrust'	=>	round( $response['ptrp'] * 100 ) / 100
+			, 'total_external_links'	=>	$response['ued']
+			, 'total_linking_root_domains'	=>	$response['uipl']
+		);
 	}
 	
 	private static function get_client_creds( $client )

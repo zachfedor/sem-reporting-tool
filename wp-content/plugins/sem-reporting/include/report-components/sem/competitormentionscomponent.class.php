@@ -8,6 +8,24 @@ class CompetitorMentionsComponent extends SimpleComponent
 	{
 		$this->competitor_mentions = $competitor_mentions;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		$competitor_mentions = array();
+		foreach( $arr['competitor_mentions'] as $competitor_mention )
+		{
+			$competitor_mentions[] = new CompetitorMention( $competitor_mention['page_url'], $competitor_mention['date'] );
+		}
+		
+		return new self( $competitor_mentions );
+	}
 
 	public function get_competitor_mentions()
 	{

@@ -12,6 +12,26 @@ class LinkedInComponent extends SimpleComponent
 		$this->engagement = $engagement;
 		$this->post_stats = $post_stats;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		$post_stats = array();
+		foreach( $arr['post_stats'] as $post_stat )
+		{
+			$post_stats[] = new LinkedInPostStats( $post_stat['content'], $post_stat['post_date'], $post_stat['audience']
+				, $post_stat['sponsored'], $post_stat['impressions'], $post_stat['clicks'], $post_stat['interactions']
+				, $post_stat['followers_acquired'], $post_stat['engagement'] );
+		}
+		
+		return new self( $arr['total_followers'], $arr['new_followers'], $arr['impressions_rate'], $arr['engagement'], $post_stats );
+	}
 
 	public function get_total_followers()
 	{

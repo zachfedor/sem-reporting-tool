@@ -9,6 +9,18 @@ class TwitterComponent extends SimpleComponent
 		$this->total_followers = $total_followers;
 		$this->total_following = $total_following;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		return new self( $arr['total_followers'], $arr['total_following'] );
+	}
 
 	public function get_total_followers()
 	{

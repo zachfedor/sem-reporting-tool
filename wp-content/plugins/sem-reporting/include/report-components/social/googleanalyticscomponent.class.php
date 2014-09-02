@@ -9,6 +9,18 @@ class GoogleAnalyticsComponent extends SimpleComponent
 		$this->total_sessions = $total_sessions;
 		$this->sessions_social_referral = $sessions_social_referral;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		return new self( $arr['total_sessions'], $arr['sessions_social_referral'] );
+	}
 
 	public function get_total_sessions()
 	{

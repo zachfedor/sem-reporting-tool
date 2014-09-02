@@ -3,10 +3,10 @@
 class YouTubeDemographics extends SimpleComponent
 {
 	protected $views, $estimated_minutes_watched, $new_subscribers, $likes, $dislikes
-		, $comments, $sharess, $favorites_added, $favorites_removed, $age_of_subscribers;
+		, $comments, $shares, $favorites_added, $favorites_removed, $age_of_subscribers;
 	
 	function __construct( $views, $estimated_minutes_watched, $new_subscribers, $likes, $dislikes
-		, $comments, $sharess, $favorites_added, $favorites_removed, $age_of_subscribers )
+		, $comments, $shares, $favorites_added, $favorites_removed, $age_of_subscribers )
 	{
 		$this->views = $views;
 		$this->estimated_minutes_watched = $estimated_minutes_watched;
@@ -50,9 +50,9 @@ class YouTubeDemographics extends SimpleComponent
 	    return $this->comments;
 	}
 
-	public function get_sharess()
+	public function get_shares()
 	{
-	    return $this->sharess;
+	    return $this->shares;
 	}
 
 	public function get_favorites_added()

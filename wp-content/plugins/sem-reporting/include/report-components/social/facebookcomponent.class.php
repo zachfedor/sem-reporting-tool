@@ -10,6 +10,24 @@ class FacebookComponent extends SimpleComponent
 		$this->total_reach = $total_reach;
 		$this->top_ten_posts = $top_ten_posts;
 	}
+	
+	public static function get_from_serialized_array( $serialized_array )
+	{
+		$unserialized_array = unserialize( $serialized_array );
+		
+		return self::get_from_array( $unserialized_array );
+	}
+	
+	public static function get_from_array( $arr )
+	{
+		$top_ten_posts = array();
+		foreach( $arr['top_ten_posts'] as $post )
+		{
+			$top_ten_posts[] = new FacebookPost( $post['content'] );
+		}
+		
+		return new self( $arr['total_likes'], $arr['total_reach'], $top_ten_posts );
+	}
 
 	public function get_total_likes()
 	{
