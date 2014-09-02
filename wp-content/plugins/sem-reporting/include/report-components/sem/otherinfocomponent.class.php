@@ -1,11 +1,34 @@
 <?php
 
-class OtherInfoComponent  extends SimpleComponent
+class OtherInfoComponent extends SimpleComponent
 {
-	protected $info_pieces;
+	protected $sessions, $pages_per_session, $average_session_duration, $bounce_rate;
 	
-	function __construct( $info_pieces=array() )
+	function __construct( $sessions=0, $pages_per_session=0, $average_session_duration=0, $bounce_rate=0 )
 	{
-		$this->info_pieces = $info_pieces;
+		$this->sessions = $sessions;
+		$this->pages_per_session = $pages_per_session;
+		$this->average_session_duration = $average_session_duration;
+		$this->bounce_rate = $bounce_rate;
+	}
+
+	public function get_sessions()
+	{
+	    return $this->sessions;
+	}
+
+	public function get_pages_per_session()
+	{
+	    return $this->pages_per_session;
+	}
+
+	public function get_average_session_duration()
+	{
+	    return $this->average_session_duration;
+	}
+
+	public function get_bounce_rate()
+	{
+	    return $this->bounce_rate;
 	}
 }

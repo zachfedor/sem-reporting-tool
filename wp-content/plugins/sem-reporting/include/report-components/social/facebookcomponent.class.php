@@ -10,4 +10,19 @@ class FacebookComponent extends SimpleComponent
 		$this->total_reach = $total_reach;
 		$this->top_ten_posts = $top_ten_posts;
 	}
+
+	public function get_total_likes()
+	{
+	    return $this->total_likes;
+	}
+
+	public function get_total_reach()
+	{
+	    return $this->total_reach;
+	}
+
+	public function get_top_ten_posts()
+	{
+	    return $this->top_ten_posts;
+	}
 }

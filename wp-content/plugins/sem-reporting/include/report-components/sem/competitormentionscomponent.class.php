@@ -8,4 +8,9 @@ class CompetitorMentionsComponent extends SimpleComponent
 	{
 		$this->competitor_mentions = $competitor_mentions;
 	}
+
+	public function get_competitor_mentions()
+	{
+	    return $this->competitor_mentions;
+	}
 }

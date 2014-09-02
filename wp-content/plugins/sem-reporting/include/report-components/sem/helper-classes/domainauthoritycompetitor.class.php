@@ -2,12 +2,27 @@
 
 class DomainAuthorityCompetitor extends SimpleComponent
 {
-	protected $name, $domain_authority, $change;
+	protected $url, $domain_authority, $change;
 	
-	function __construct( $name='', $domain_authority=0, $change=0 )
+	function __construct( $url='', $domain_authority=0, $change=0 )
 	{
-		$this->name = $name;
+		$this->url = $url;
 		$this->domain_authority = $domain_authority;
 		$this->change = $change;
+	}
+
+	public function get_url()
+	{
+	    return $this->url;
+	}
+
+	public function get_domain_authority()
+	{
+	    return $this->domain_authority;
+	}
+
+	public function get_change()
+	{
+	    return $this->change;
 	}
 }

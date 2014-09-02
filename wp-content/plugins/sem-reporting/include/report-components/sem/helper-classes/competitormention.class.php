@@ -9,4 +9,14 @@ class CompetitorMention extends SimpleComponent
 		$this->page_url = $page_url;
 		$this->date = $date;
 	}
+
+	public function get_page_url()
+	{
+	    return $this->page_url;
+	}
+
+	public function get_date()
+	{
+	    return $this->date;
+	}
 }

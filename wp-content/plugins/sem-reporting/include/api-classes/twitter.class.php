@@ -3,7 +3,14 @@ require_once __DIR__ . '/../wrappers/twitter-api-php-master/TwitterAPIExchange.p
 
 class Twitter
 {
-	public static function get_data()
+	public static function get_component()
+	{
+		$data = self::get_data();
+
+		return new TwitterComponent( $data['followers'], $data['following'] );
+	}
+	
+	private static function get_data()
 	{
 		/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 		$settings = array(
@@ -38,9 +45,11 @@ class Twitter
 		$following = json_decode( $friends );
 		$total_following = count( $following->ids );
 		
-		//make the twitter report component and return it
-		$twitter_component = new TwitterComponent( $total_followers, $total_following );
+		$data = array(
+			'following'	=>	$total_following
+			, 'followers'	=>	$total_followers
+		);
 		
-		return $twitter_component;
+		return $data;
 	}
 }

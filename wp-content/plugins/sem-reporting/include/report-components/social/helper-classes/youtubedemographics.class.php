@@ -19,4 +19,54 @@ class YouTubeDemographics extends SimpleComponent
 		$this->favorites_removed = $favorites_removed;
 		$this->age_of_subscribers = $age_of_subscribers;
 	}
+
+	public function get_views()
+	{
+	    return $this->views;
+	}
+
+	public function get_estimated_minutes_watched()
+	{
+	    return $this->estimated_minutes_watched;
+	}
+
+	public function get_new_subscribers()
+	{
+	    return $this->new_subscribers;
+	}
+
+	public function get_likes()
+	{
+	    return $this->likes;
+	}
+
+	public function get_dislikes()
+	{
+	    return $this->dislikes;
+	}
+
+	public function get_comments()
+	{
+	    return $this->comments;
+	}
+
+	public function get_sharess()
+	{
+	    return $this->sharess;
+	}
+
+	public function get_favorites_added()
+	{
+	    return $this->favorites_added;
+	}
+
+	public function get_favorites_removed()
+	{
+	    return $this->favorites_removed;
+	}
+
+	public function get_age_of_subscribers()
+	{
+	    return $this->age_of_subscribers;
+	}
 }

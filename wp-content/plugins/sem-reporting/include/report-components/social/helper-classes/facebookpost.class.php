@@ -8,4 +8,9 @@ class FacebookPost extends SimpleComponent
 	{
 		$this->content = $content;
 	}
+
+	public function get_content()
+	{
+	    return $this->content;
+	}
 }

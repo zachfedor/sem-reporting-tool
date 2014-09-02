@@ -10,4 +10,19 @@ class Keyword extends SimpleComponent
 		$this->from = $from;
 		$this->to = $to;
 	}
+
+	public function get_keyword()
+	{
+	    return $this->keyword;
+	}
+
+	public function get_from()
+	{
+	    return $this->from;
+	}
+
+	public function get_to()
+	{
+	    return $this->to;
+	}
 }

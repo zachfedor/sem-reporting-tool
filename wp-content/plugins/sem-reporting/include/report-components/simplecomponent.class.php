@@ -6,23 +6,34 @@ class SimpleComponent
 	{
 		$arr = array();
 
+		//get the properties of the object
 		$obj_vars = get_object_vars( $this );
 
+		//iterate over the object's properties
 		foreach ( $obj_vars as $key => $val )
 		{
+			//if it's an array, need to turn each into array first
 			if ( is_array( $val ) )
 			{
 				$objs = array();
 
+				//turn each object into array
 				foreach ( $val as $sub_val )
 				{
 					$objs[] = $sub_val->to_array();
 				}
 
+				//add array of objects->array to array
 				$arr[$key] = $objs;
+			}
+			else if ( is_object( $val ) )
+			{
+				//turn to array and add value to array
+				$arr[$key] = $val->to_array();
 			}
 			else
 			{
+				//add value to array
 				$arr[$key] = $val;
 			}
 		}

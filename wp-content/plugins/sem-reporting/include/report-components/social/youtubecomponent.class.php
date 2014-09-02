@@ -16,4 +16,19 @@ class YouTubeComponent extends SimpleComponent
 		
 		$this->demographics = $demographics;
 	}
+
+	public function get_total_views()
+	{
+	    return $this->total_views;
+	}
+
+	public function get_total_subscribers()
+	{
+	    return $this->total_subscribers;
+	}
+
+	public function get_demographics()
+	{
+	    return $this->demographics;
+	}
 }

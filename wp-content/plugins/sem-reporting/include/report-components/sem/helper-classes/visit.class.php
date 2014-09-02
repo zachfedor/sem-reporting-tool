@@ -11,4 +11,24 @@ class Visit extends SimpleComponent
 		$this->num_visits = $num_visits;
 		$this->percent_change = $percent_change;
 	}
+
+	public function get_month_start_date()
+	{
+	    return $this->month_start_date;
+	}
+
+	public function get_type()
+	{
+	    return $this->type;
+	}
+
+	public function get_num_visits()
+	{
+	    return $this->num_visits;
+	}
+
+	public function get_percent_change()
+	{
+	    return $this->percent_change;
+	}
 }

@@ -14,10 +14,10 @@ require_once 'sem/otherinfocomponent.class.php';
 require_once 'sem/rankinghighlightscomponent.class.php';
 require_once 'sem/visitscomponent.class.php';
 
-require_once 'sem/helper-classes/competitorlinkmetric.class.php';
+require_once 'sem/helper-classes/linkmetrics.class.php';
+require_once 'sem/helper-classes/linkmetric.class.php';
 require_once 'sem/helper-classes/competitormention.class.php';
 require_once 'sem/helper-classes/domainauthoritycompetitor.class.php';
-require_once 'sem/helper-classes/infopiece.class.php';
 require_once 'sem/helper-classes/keyword.class.php';
 require_once 'sem/helper-classes/visit.class.php';
 

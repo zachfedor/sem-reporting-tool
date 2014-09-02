@@ -11,4 +11,24 @@ class PinterestComponent extends SimpleComponent
 		$this->reach = $reach;
 		$this->clicks = $clicks;
 	}
+
+	public function get_pins_from_website()
+	{
+	    return $this->pins_from_website;
+	}
+
+	public function get_imporessions()
+	{
+	    return $this->imporessions;
+	}
+
+	public function get_reach()
+	{
+	    return $this->reach;
+	}
+
+	public function get_clicks()
+	{
+	    return $this->clicks;
+	}
 }

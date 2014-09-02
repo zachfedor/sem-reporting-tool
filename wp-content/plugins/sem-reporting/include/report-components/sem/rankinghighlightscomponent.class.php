@@ -8,4 +8,9 @@ class RankingHighlightsComponent extends SimpleComponent
 	{
 		$this->keywords = $keywords;
 	}
+
+	public function get_keywords()
+	{
+	    return $this->keywords;
+	}
 }

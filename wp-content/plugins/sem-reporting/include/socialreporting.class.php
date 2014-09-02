@@ -12,37 +12,15 @@ class SocialReporting
 			'tower'	=>	'ga:32351305'
 			, 'lrrcu'	=>	'ga:61739784'
 			, 'continental'	=>	'ga:6086169'
-			, 'nda'	=>	'ga:75274122'
 		);
 		
 		$google_analytics_id = array_shift( $google_analytics_ids );
 		
-		$googleanalytics_component = Google::get_google_analytics_data( $google_analytics_id );
-
-		$youtube_analytics_ids = array(
-			'tower'	=>	'channel==RN49YEulHCg4pFbakZsVMQ'
-			, 'lrrcu'	=>	'ga:61739784'
-			, 'continental'	=>	'ga:6086169'
-			, 'nda'	=>	'ga:75274122'
-		);
+		$googleanalytics_component = Moz::get_competitor_link_metrics_component( 'tower' );
 		
-		$youtube_analytics_id = array_shift( $youtube_analytics_ids );
-		
-		$youtube_analytics_component = Google::get_youtube_analytics_data( $youtube_analytics_id );
-		
-		//$twitter_component = $this->get_twitter_data();
-		
-		//$facebook_component = $this->get_facebook_data();
-	}
-	
-	private function get_facebook_data()
-	{
-		return Facebook::get_data();
-	}
-	
-	private function get_twitter_data()
-	{
-		return Twitter::get_data();
+		echo '<pre>';
+		print_r($googleanalytics_component->to_array());
+		echo '</pre>';
 	}
 	
 	function elog( $stuff )

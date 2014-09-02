@@ -9,4 +9,14 @@ class DomainAuthorityComponent extends SimpleComponent
 		$this->domain_authority = $domain_authority;
 		$this->domain_authority_competitors = $domain_authority_competitors;
 	}
+
+	public function get_domain_authority()
+	{
+	    return $this->domain_authority;
+	}
+
+	public function get_domain_authority_competitors()
+	{
+	    return $this->domain_authority_competitors;
+	}
 }

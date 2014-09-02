@@ -11,9 +11,41 @@ class Google
 	const EMAIL_ADDRESS = '5723237213-2rh9smblhnof7d82ik5i3rb7g5uf383a@developer.gserviceaccount.com';
 	const KEY_FILE_LOCATION = '/SEMReporting-2bd114da8850.p12';//password - notasecret
 	
-	public static function get_google_analytics_data( $id )
+	public static function get_social_component( $id )
 	{
+		$data = self::get_google_analytics_data( $id );
 		
+		$social_data = $data['social'];
+		
+		return new GoogleAnalyticsComponent( $social_data['total_sessions'], $social_data['sessions_via_social_referral'] );
+	}
+	
+	public static function get_sem_other_info_component( $id )
+	{
+		$data = self::get_sem_data( $id );
+
+		$visit_info = $data['visit_info'];
+		$session_info = $data['session_info'];
+		
+		return new OtherInfoComponent( $session_info['total'], $session_info['page_views_per'], $session_info['average_duration'], $session_info['bounce_rate'] );
+	}
+	
+	public static function get_social_data( $id )
+	{
+		$data = self::get_google_analytics_data( $id );
+		
+		return $data['social'];
+	}
+	
+	public static function get_sem_data( $id )
+	{
+		$data = self::get_google_analytics_data( $id );
+		
+		return $data['sem'];
+	}
+	
+	private static function get_google_analytics_data( $id )
+	{	
 		$client = new Google_Client();
 		$client->setApplicationName( 'SEMReporting' );
 		
@@ -99,6 +131,23 @@ class Google
 					break;
 			}
 		}
+		
+		$sem_data = array(
+			'visit_info'	=>	$visit_info
+			, 'session_info'	=>	$session_info
+		);
+		
+		$social_data = array(
+			'total_sessions'	=>	$session_info['total']
+			, 'sessions_via_social_referral'	=>	$visit_info['social']
+		);
+		
+		$data = array(
+			'sem'	=>	$sem_data
+			, 'social'	=>	$social_data
+		);
+		
+		return $data;
 	}
 	
 	public static function get_youtube_analytics_data( $id )
@@ -117,10 +166,9 @@ class Google
 		);
 	
 		$client->setAssertionCredentials( $cred );
-		//if($client->getAuth()->isAccessTokenExpired() )
+		if( $client->getAuth()->isAccessTokenExpired() )
 		{
 			$client->getAuth()->refreshTokenWithAssertion( $cred );
-			echo $client->getAccessToken();
 		}
 	
 		$service = new Google_Service_YouTubeAnalytics( $client );
@@ -138,7 +186,7 @@ class Google
 		);
 		$params = array( 'dimensions' => implode( ',', $dimensions ) );
 		
-		$data = $service->reports->query( $id, $start_date, $end_date, implode( ',', $metrics ));//, $params );
+		$data = $service->reports->query( $id, $start_date, $end_date, implode( ',', $metrics ) );//, $params );
 		
 		print_r($data);
 	}
