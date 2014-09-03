@@ -49,6 +49,40 @@ class CompetitorLinkMetricsComponent extends SimpleComponent
 		return new self( $link_metrics, $competitor_link_metrics );
 	}
 	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-competitor-link-metrics-component">
+			<table id="tbl-competitor-lik-metrics">
+				<thead>
+			        <tr>
+			        	<th>Metric</th>
+			        	<th><?php echo $this->link_metrics->get_link(); ?></th>
+			        	<?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
+			            <th><?php echo $competitor->get_link(); ?></th>
+			            <?php } ?>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<?php foreach ( $this->link_metrics->get_metrics() as $row => $metric ) { ?>
+			        <tr>
+			            <td><?php echo $metric->get_name(); ?></td>
+			            <td><?php echo $metric->get_value(); ?></td>
+			            <?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
+	            		<td><?php $competitor_metrics = $competitor->get_metrics(); echo $competitor_metrics[$row]->get_value(); ?></td>
+			            <?php } ?>
+			        </tr>
+			        <?php } ?>
+			    </tbody>
+			</table>
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
+	
 	public function get_link_metrics()
 	{
 		return $this->link_metrics;

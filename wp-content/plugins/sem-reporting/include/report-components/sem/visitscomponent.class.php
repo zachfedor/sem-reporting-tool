@@ -22,10 +22,41 @@ class VisitsComponent extends SimpleComponent
 		$visits = array();
 		foreach( $arr['visits'] as $visit )
 		{
-			$visits[] = new Visit( $arr['month_start_date'], $arr['type'], $arr['num_visits'], $arr['percent_change'] );
+			$visits[] = new Visit( $visit['type'], $visit['num_visits'], $visit['percent_change'] );
 		}
 		
 		return new self( $arr['total_visits'], $visits );
+	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-visits-component">
+			<div id="dv-total-visits"><?php echo $this->total_visits; ?> Total Visits</div>
+			<div id="dv-visits-breakdown">
+				<table>
+					<thead>
+			        <tr>
+			        	<th>Visit Type</th>
+			        	<th>#</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<?php foreach ( $this->visits as $visit_type ) { ?>
+			        <tr>
+			        	<td><?php echo $visit_type->get_type(); ?></td>
+			        	<td><?php echo $visit_type->get_num_visits(); ?></td>
+			        </tr>
+			        <?php } ?>
+			    </tbody>
+				</table>
+			</div>
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
 	}
 
 	public function get_total_visits()

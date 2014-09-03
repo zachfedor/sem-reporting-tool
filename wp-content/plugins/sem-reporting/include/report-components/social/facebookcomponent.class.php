@@ -28,6 +28,19 @@ class FacebookComponent extends SimpleComponent
 		
 		return new self( $arr['total_likes'], $arr['total_reach'], $top_ten_posts );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-facebook-component">
+		
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_total_likes()
 	{

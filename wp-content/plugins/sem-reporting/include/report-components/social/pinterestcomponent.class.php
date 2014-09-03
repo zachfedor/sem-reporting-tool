@@ -23,6 +23,19 @@ class PinterestComponent extends SimpleComponent
 	{
 		return new self( $arr['pins_from_website'], $arr['impressions'], $arr['reach'], $arr['clicks'] );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-pinterest-component">
+		
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_pins_from_website()
 	{

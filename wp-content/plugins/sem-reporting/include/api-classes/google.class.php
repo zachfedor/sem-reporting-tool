@@ -29,6 +29,21 @@ class Google
 		return new OtherInfoComponent( $session_info['total'], $session_info['page_views_per'], $session_info['average_duration'], $session_info['bounce_rate'] );
 	}
 	
+	public static function get_sem_visits_component( $client )
+	{
+		$data = self::get_sem_data( $client );
+		$total_visits = $data['session_info']['total'];
+		$visit_info = $data['visit_info'];
+		
+		$visits = array();
+		foreach ( $visit_info as $type => $num_visits )
+		{
+			$visits[] = new Visit( $type, $num_visits );
+		}
+		
+		return new VisitsComponent( $total_visits, $visits );
+	}
+	
 	private static function get_social_data( $id )
 	{
 		$data = self::get_google_analytics_data( $id );

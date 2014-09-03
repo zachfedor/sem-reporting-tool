@@ -32,6 +32,19 @@ class LinkedInComponent extends SimpleComponent
 		
 		return new self( $arr['total_followers'], $arr['new_followers'], $arr['impressions_rate'], $arr['engagement'], $post_stats );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-linked-in-component">
+		
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_total_followers()
 	{

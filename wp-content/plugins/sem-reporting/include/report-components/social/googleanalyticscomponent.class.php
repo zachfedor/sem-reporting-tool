@@ -21,6 +21,20 @@ class GoogleAnalyticsComponent extends SimpleComponent
 	{
 		return new self( $arr['total_sessions'], $arr['sessions_social_referral'] );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-google-analytics-component">
+			Total Sessions: <?php echo $this->total_sessions; ?><br />
+			Sessions Via Social Referral: <?php echo $this->sessions_social_referral; ?>
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_total_sessions()
 	{

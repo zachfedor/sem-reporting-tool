@@ -27,6 +27,40 @@ class DomainAuthorityComponent extends SimpleComponent
 		
 		return new self( $arr['domain_authority'], $domain_authority_competitors );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-domain-authority-component">
+			<div id="dv-domain-authority">
+				<?php echo $this->domain_authority; ?><br />
+				Domain Authority
+			</div>
+			<div id="dv-domain-authority-competitors">
+				<table>
+					<thead>
+			        <tr>
+			        	<th>Competitor</th>
+			        	<th>Domain Authority</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<?php foreach ( $this->domain_authority_competitors as $domain_authority_competitor ) { ?>
+			        <tr>
+			            <td><?php echo $domain_authority_competitor->get_url(); ?></td>
+			            <td><?php echo $domain_authority_competitor->get_domain_authority(); ?></td>
+			        </tr>
+			        <?php } ?>
+			    </tbody>
+				</table>
+			</div>
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_domain_authority()
 	{

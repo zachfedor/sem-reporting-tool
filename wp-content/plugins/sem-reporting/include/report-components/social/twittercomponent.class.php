@@ -21,6 +21,20 @@ class TwitterComponent extends SimpleComponent
 	{
 		return new self( $arr['total_followers'], $arr['total_following'] );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-twitter-component">
+			Total Followers: <?php echo $this->total_followers; ?><br />
+			Total Following: <?php echo $this->total_following; ?>
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_total_followers()
 	{

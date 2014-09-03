@@ -23,6 +23,22 @@ class OtherInfoComponent extends SimpleComponent
 	{
 		return new self( $arr['sessions'], $arr['pages_per_session'], $arr['average_session_duration'], $arr['bounce_rate'] );
 	}
+	
+	public function to_html()
+	{
+		ob_start();
+		?>
+		<div id="dv-other-info-component">
+			Sessions: <?php echo $this->sessions; ?><br />
+			Pages / Session: <?php echo $this->pages_per_session; ?><br />
+			Avg. Session Duration: <?php echo $this->average_session_duration; ?><br />
+			Bounce Rate: <?php echo $this->bounce_rate; ?>%<br />
+		</div>
+		<?php
+		$html = ob_get_clean();
+		
+		return $html;
+	}
 
 	public function get_sessions()
 	{
