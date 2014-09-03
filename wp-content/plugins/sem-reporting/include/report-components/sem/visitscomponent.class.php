@@ -10,6 +10,11 @@ class VisitsComponent extends SimpleComponent
 		$this->visits = $visits;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Google::get_sem_visits_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

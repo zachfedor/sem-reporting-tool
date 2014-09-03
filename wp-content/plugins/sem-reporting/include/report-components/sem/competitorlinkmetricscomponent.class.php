@@ -17,6 +17,11 @@ class CompetitorLinkMetricsComponent extends SimpleComponent
 		$this->competitor_link_metrics = $competitor_link_metrics;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Moz::get_competitor_link_metrics_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

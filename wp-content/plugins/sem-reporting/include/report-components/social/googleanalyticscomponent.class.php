@@ -10,6 +10,11 @@ class GoogleAnalyticsComponent extends SimpleComponent
 		$this->sessions_social_referral = $sessions_social_referral;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Google::get_social_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

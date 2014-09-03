@@ -10,6 +10,11 @@ class TwitterComponent extends SimpleComponent
 		$this->total_following = $total_following;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Twitter::get_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

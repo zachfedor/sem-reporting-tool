@@ -12,6 +12,11 @@ class OtherInfoComponent extends SimpleComponent
 		$this->bounce_rate = $bounce_rate;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Google::get_sem_other_info_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

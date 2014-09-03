@@ -10,6 +10,11 @@ class DomainAuthorityComponent extends SimpleComponent
 		$this->domain_authority_competitors = $domain_authority_competitors;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Moz::get_domain_authority_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );
