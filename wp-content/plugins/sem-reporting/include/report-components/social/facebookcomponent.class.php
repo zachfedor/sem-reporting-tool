@@ -2,12 +2,13 @@
 
 class FacebookComponent extends SimpleComponent
 {
-	protected $total_likes, $total_reach, $top_ten_posts;
+	protected $total_likes, $total_reach, $reach_breakdown, $top_ten_posts;
 	
-	function __construct( $total_likes=0, $total_reach=0, $top_ten_posts=array() )
+	function __construct( $total_likes=0, $total_reach=0, $reach_breakdown=array(), $top_ten_posts=array() )
 	{
 		$this->total_likes = $total_likes;
 		$this->total_reach = $total_reach;
+		$this->reach_breakdown = $reach_breakdown;
 		$this->top_ten_posts = $top_ten_posts;
 	}
 	
@@ -23,10 +24,10 @@ class FacebookComponent extends SimpleComponent
 		$top_ten_posts = array();
 		foreach( $arr['top_ten_posts'] as $post )
 		{
-			$top_ten_posts[] = new FacebookPost( $post['content'] );
+			$top_ten_posts[] = new FacebookPost( $post['content'], $post['engagement'], $post['reach ']);
 		}
 		
-		return new self( $arr['total_likes'], $arr['total_reach'], $top_ten_posts );
+		return new self( $arr['total_likes'], $arr['total_reach'], $arr['reach_breakdown'], $top_ten_posts );
 	}
 	
 	public function to_html()
@@ -34,7 +35,25 @@ class FacebookComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-facebook-component">
-		
+			Total Likes: <?php echo $this->total_likes; ?><br />
+			Total Reach: <?php echo $this->total_reach; ?><br />
+			Reach Breakdown:<br />
+			<table id="tbl-competitor-lik-metrics">
+				<thead>
+			        <tr>
+			        	<th>Times Seen</th>
+			        	<th># People</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<?php foreach ( $this->reach_breakdown as $times_seen => $num_people ) { ?>
+			        <tr>
+			            <td><?php echo $times_seen; ?></td>
+			            <td><?php echo $num_people; ?></td>
+			        </tr>
+			        <?php } ?>
+			    </tbody>
+			</table>
 		</div>
 		<?php
 		$html = ob_get_clean();
@@ -50,6 +69,11 @@ class FacebookComponent extends SimpleComponent
 	public function get_total_reach()
 	{
 	    return $this->total_reach;
+	}
+
+	public function get_reach_breakdown()
+	{
+	    return $this->reach_breakdown;
 	}
 
 	public function get_top_ten_posts()

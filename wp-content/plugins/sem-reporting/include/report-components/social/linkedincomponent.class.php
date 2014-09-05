@@ -2,15 +2,20 @@
 
 class LinkedInComponent extends SimpleComponent
 {
-	protected $total_followers, $new_followers, $impressions_rate, $engagement, $post_stats;
+	protected $total_followers, $new_followers, $impressions, $engagement_rate, $post_stats;
 	
-	function __construct( $total_followers=0, $new_followers=0, $impressions_rate=0, $engagement=0, $post_stats=array() )
+	function __construct( $total_followers=0, $new_followers=0, $impressions=0, $engagement_rate=0, $post_stats=array() )
 	{
 		$this->total_followers = $total_followers;
 		$this->new_followers = $new_followers;
-		$this->impressions_rate = $impressions_rate;
-		$this->engagement = $engagement;
+		$this->impressions = $impressions;
+		$this->engagement_rate = $engagement_rate;
 		$this->post_stats = $post_stats;
+	}
+	
+	public static function get_by_client( $client )
+	{
+		return LinkedIn::get_component( $client );
 	}
 	
 	public static function get_from_serialized_array( $serialized_array )
@@ -27,10 +32,10 @@ class LinkedInComponent extends SimpleComponent
 		{
 			$post_stats[] = new LinkedInPostStats( $post_stat['content'], $post_stat['post_date'], $post_stat['audience']
 				, $post_stat['sponsored'], $post_stat['impressions'], $post_stat['clicks'], $post_stat['interactions']
-				, $post_stat['followers_acquired'], $post_stat['engagement'] );
+				, $post_stat['followers_acquired'], $post_stat['engagement_rate'] );
 		}
 		
-		return new self( $arr['total_followers'], $arr['new_followers'], $arr['impressions_rate'], $arr['engagement'], $post_stats );
+		return new self( $arr['total_followers'], $arr['new_followers'], $arr['impressions'], $arr['engagement_rate'], $post_stats );
 	}
 	
 	public function to_html()
@@ -56,14 +61,14 @@ class LinkedInComponent extends SimpleComponent
 	    return $this->new_followers;
 	}
 
-	public function get_impressions_rate()
+	public function get_impressions()
 	{
-	    return $this->impressions_rate;
+	    return $this->impressions;
 	}
 
-	public function get_engagement()
+	public function get_engagement_rate()
 	{
-	    return $this->engagement;
+	    return $this->engagement_rate;
 	}
 
 	public function get_post_stats()

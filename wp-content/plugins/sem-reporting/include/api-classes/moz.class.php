@@ -13,9 +13,7 @@ class Moz
 			$domain_authority_competitors[] = new DomainAuthorityCompetitor( $competitor['url'], $competitor['domain_authority'] );
 		}
 
-		$domain_authority_component = new DomainAuthorityComponent( $data['domain_authority'], $domain_authority_competitors );
-		
-		return $domain_authority_component;
+		return new DomainAuthorityComponent( $data['domain_authority'], $domain_authority_competitors );
 	}
 	
 	public static function get_competitor_link_metrics_component( $client )
@@ -67,9 +65,9 @@ class Moz
 		
 		//set the authentication parameters
 		$authenticator = new Authenticator();
-		$authenticator->setAccessID($client_data['access_id']);
-		$authenticator->setSecretKey($client_data['secret_key']);
-		$authenticator->setRateLimit($rateLimit);
+		$authenticator->setAccessID( $client_data['access_id'] );
+		$authenticator->setSecretKey( $client_data['secret_key'] );
+		$authenticator->setRateLimit( $rateLimit );
 		
 		// URL to query
 		$objectURL = $client_data['url'];
@@ -121,17 +119,39 @@ class Moz
 	{
 		$clients = array(
 			'tower'	=>	array(
-				'access_id'	=>	'member-53c0767d2c'
-				, 'secret_key'	=>	'b37eb0af871a2a3f53d28d72f04eb1d9'
-				, 'url'	=>	'www.towermarketing.net'
+				'url'	=>	'www.towermarketing.net'
 				, 'competitors'	=>	array(
 					'www.ezsolution.com'
 					, 'www.synapseresults.com'
 					, 'www.webtekcc.com'
 				)
 			)
+			,'fairmount'	=>	array(
+				'url'	=>	'fairmountbhs.com'
+				, 'competitors'	=>	array()
+			)
+			,'lrrcu'	=>	array(
+				'url'	=>	'lrrcu.org'
+				, 'competitors'	=>	array(
+					'www.lancofcu.com'
+					, 'www.members1st.org'
+					, 'www.psecu.com'
+				)
+			)
+			,'countrymeadows'	=>	array(
+				'url'	=>	'countrymeadows.com'
+				, 'competitors'	=>	array(
+					'www.emeritus.com'
+					, 'www.diakon.org'
+					, 'phoebe.org'
+				)
+			)
 		);
 		
-		return $clients[$client];
+		$creds = $clients[$client];
+		$creds['access_id'] = 'member-53c0767d2c';
+		$creds['secret_key'] = 'b37eb0af871a2a3f53d28d72f04eb1d9';
+		
+		return $creds;
 	}
 }

@@ -11,6 +11,19 @@ class Facebook
 	const APP_ID = '251173041748131';
 	const APP_SECRET = 'bc5d3f8e4f7e131cef52e7da294da1e3';
 	
+	public static function get_component( $client )
+	{
+		$data = self::get_data( $client );
+		
+		$top_ten_posts = array();
+		foreach ( $data['top_ten_posts'] as $post )
+		{
+			$top_ten_posts[] = new FacebookPost( $content, $post['engagement_rate'], $post['reach'] );
+		}
+		
+		return new FacebookComponent( $data['total_likes'], $data['total_reach'], $data['reach_breakdown'], $top_ten_posts );
+	}
+	
 	public static function get_data( $client )
 	{
 		$creds = self::get_client_creds( $client );
@@ -25,13 +38,47 @@ class Facebook
 		
 		//start a new session with the access token
 		$session = new FacebookSession( $creds['access_token'] );
-	
-		//request for posts
-		$request = new FacebookRequest($session, 'GET', '/' . $creds['page_id'] . '/posts');
+
+		$since = strtotime( '12:00am last day of last month' );
+		
+		//request for page likes
+		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/insights/page_fans?since=' . $since );
 		$class_name = GraphUser::className();
-		$post_lists = $request->execute()->getGraphObject($class_name)->asArray();
+		$likes_response = $request->execute()->getGraphObject( $class_name )->asArray();
+		$total_likes = $likes_response['data'][0]->values[0]->value;
+
+		//request for total page reach
+		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/insights/page_impressions/days_28?since=' . $since );
+		$class_name = GraphUser::className();
+		$total_reach_response = $request->execute()->getGraphObject( $class_name )->asArray();
+		$total_reach = $total_reach_response['data'][0]->values[0]->value;
+
+		//request for page reach
+		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/insights/page_impressions_frequency_distribution/days_28?since=' . $since );
+		$class_name = GraphUser::className();
+		$reach_breakdown_response = $request->execute()->getGraphObject( $class_name )->asArray();
+		$reach_breakdown_obj = $reach_breakdown_response['data'][0]->values[0]->value;
+		$reach_breakdown = array();
+		$obj_vars = get_object_vars( $reach_breakdown_obj );
+		foreach ( $obj_vars as $key => $val )
+		{
+			$reach_breakdown[$key] = $val;
+		}
+		
+		//request for posts
+		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/posts' );
+		$class_name = GraphUser::className();
+		$post_list = $request->execute()->getGraphObject( $class_name )->asArray();
+		$top_ten_posts = array();
+		
+		$data = array(
+			'total_likes'	=>	$total_likes
+			, 'total_reach'	=>	$total_reach
+			, 'reach_breakdown'	=>	$reach_breakdown
+			, 'top_ten_posts'	=>	$top_ten_posts
+		);
 	
-		print_r($post_lists);
+		return $data;
 	}
 	
 	private static function get_client_creds( $client )
@@ -50,13 +97,9 @@ class Facebook
 				'page_id'	=>	'perkypetfeeders'
 				, 'access_token'	=>	'CAADkcMfuOKMBAISI27e5f7ABQb4owOChJiSAh7zte3oD87SbrgdZCFrhN6mSe0E5ookxxie2B3aMZAYuepWRqSjjLZBlszgpBi5ZB3brIFR7J2C5olLAoyCeUPbs9DSrwTTGZC1NNnemrpOKMSSlu0HbccdCE4Hee1F78oS83TQZAZBSgxQnsXi'
 			)
-			, 'cpress'	=>	array(
+			, 'continental'	=>	array(
 				'page_id'	=>	'ContinentalPress'
 				, 'access_token'	=>	'CAADkcMfuOKMBAB2lfj1nfRvJsqmjTVB2UTC1nkua281jir8KDOgXEJT83v6f4Sr3vIi5lzc2UctJ0nnZB51V8yTgLYaZAHAbtbZB7HhGUgfpUafeVCguBp3p1HtIB7UMh8iCJtQd9ZAcOKZAykVcmGE09htGIBTecgMjltvqdhWg6RveF24ND'
-			)
-			, 'nda'	=>	array(
-				'page_id'	=>	'DemolitionAssoc'
-				, 'access_token'	=>	'CAADkcMfuOKMBALpxJ3WUydZCxyECL8ERGldjgQ9mn30JSZBudP712YcjRNKlqJVm5cK8Irb6QQTlh6as0OvlY1lsGf5GPohyJ4rdXF29bnl7l7ExBQrMmv6Xps5m90WZCgoulZArdYGUIZCiFR8nZBIrwAcjv4lU1D96v91iNq3QKOJQyeTh0K'
 			)
 		);
 		

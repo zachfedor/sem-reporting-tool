@@ -20,7 +20,15 @@ class SimpleComponent
 				//turn each object into array
 				foreach ( $val as $sub_val )
 				{
-					$objs[] = $sub_val->to_array();
+					//check if already an array
+					if ( is_array( $val ) )
+					{
+						$objs = $val;
+					}
+					else
+					{
+						$objs[] = $sub_val->to_array();
+					}
 				}
 
 				//add array of objects->array to array

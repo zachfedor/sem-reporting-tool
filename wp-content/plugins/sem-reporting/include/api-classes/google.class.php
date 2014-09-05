@@ -219,6 +219,30 @@ class Google
 					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
 				)
 			)
+			, 'continental'	=>	array(
+				'analytics'	=>	array(
+					'id'	=>	'ga:6086169'
+					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
+				)
+			)
+			, 'fairmount'	=>	array(
+				'analytics'	=>	array(
+					'id'	=>	'ga:42762328'
+					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
+				)
+			)
+			, 'lrrcu'	=>	array(
+				'analytics'	=>	array(
+					'id'	=>	'ga:61739784'
+					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
+				)
+			)
+			, 'countrymeadows'	=>	array(
+				'analytics'	=>	array(
+					'id'	=>	'ga:16267479'
+					, 'key_file_location'	=>	file_get_contents( __DIR__ . '/SEMReporting-2bd114da8850.p12' )//password - notasecret
+				)
+			)
 		);
 		
 		return $clients[$client];
