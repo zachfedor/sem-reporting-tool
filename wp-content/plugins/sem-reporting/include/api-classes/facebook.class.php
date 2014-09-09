@@ -18,7 +18,7 @@ class Facebook
 		$top_ten_posts = array();
 		foreach ( $data['top_ten_posts'] as $post )
 		{
-			$top_ten_posts[] = new FacebookPost( $content, $post['engagement_rate'], $post['reach'] );
+			$top_ten_posts[] = new FacebookPost( $post['content'], $post['engagement_rate'], $post['reach'], $post['created_time'] );
 		}
 		
 		return new FacebookComponent( $data['total_likes'], $data['total_reach'], $data['reach_breakdown'], $top_ten_posts );
@@ -39,6 +39,8 @@ class Facebook
 		//start a new session with the access token
 		$session = new FacebookSession( $creds['access_token'] );
 
+		date_default_timezone_set( 'America/New_York' );
+		
 		$since = strtotime( '12:00am last day of last month' );
 		
 		//request for page likes
@@ -49,13 +51,11 @@ class Facebook
 
 		//request for total page reach
 		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/insights/page_impressions/days_28?since=' . $since );
-		$class_name = GraphUser::className();
 		$total_reach_response = $request->execute()->getGraphObject( $class_name )->asArray();
 		$total_reach = $total_reach_response['data'][0]->values[0]->value;
 
 		//request for page reach
 		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/insights/page_impressions_frequency_distribution/days_28?since=' . $since );
-		$class_name = GraphUser::className();
 		$reach_breakdown_response = $request->execute()->getGraphObject( $class_name )->asArray();
 		$reach_breakdown_obj = $reach_breakdown_response['data'][0]->values[0]->value;
 		$reach_breakdown = array();
@@ -65,11 +65,63 @@ class Facebook
 			$reach_breakdown[$key] = $val;
 		}
 		
+		$posts = array();
+		
 		//request for posts
-		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/posts' );
-		$class_name = GraphUser::className();
+		$request = new FacebookRequest( $session, 'GET', '/' . $creds['page_id'] . '/posts?limit=60' );
 		$post_list = $request->execute()->getGraphObject( $class_name )->asArray();
-		$top_ten_posts = array();
+		foreach ( $post_list['data'] as $facebook_post )
+		{
+			if ( strtotime( $facebook_post->created_time ) > strtotime( 'first day of last month')
+				&& strtotime( $facebook_post->created_time ) < strtotime( 'first day of this month') )
+			{
+				$request = new FacebookRequest( $session, 'GET', '/' . $facebook_post->id . '/insights/post_impressions_unique/lifetime' );
+				$post_reach = $request->execute()->getGraphObject( $class_name )->asArray();
+				$reach = $post_reach['data'][0]->values[0]->value;
+	
+				$request = new FacebookRequest( $session, 'GET', '/' . $facebook_post->id . '/insights/post_engaged_users/lifetime' );
+				$post_engaged_users = $request->execute()->getGraphObject( $class_name )->asArray();
+				$engaged_users = $post_engaged_users['data'][0]->values[0]->value;
+				
+				if ( $reach > 0 )
+				{
+					$engagement_rate = round( $engaged_users / $reach * 100 ) / 100;
+				}
+				else
+				{
+					$engagement_rate = 0;
+				}
+				
+				$posts[] = array(
+					'content'	=>	$facebook_post->message
+					, 'engagement_rate'	=>	$engagement_rate
+					, 'reach'	=>	$reach
+					, 'created_time'	=>	$facebook_post->created_time
+				);
+			}
+
+		}
+		
+		foreach ($posts as $key => $post) {
+		    $contents[$key]  = $post['content'];
+		    $engagement_rates[$key] = $post['engagement_rate'];
+		    $reaches[$key] = $post['reach'];
+		    $created_times[$key] = $post['created_time'];
+		}
+		
+		array_multisort( $engagement_rates, SORT_DESC, $contents, $created_times );
+		
+		foreach ( $engagement_rates as $key => $engagement_rate )
+		{
+			$top_ten_posts[] = array(
+				'content'	=>	$contents[$key]
+				, 'engagement_rate'	=>	$engagement_rates[$key]
+				, 'reach'	=>	$reaches[$key]
+				, 'created_time'	=>	$created_times[$key]
+			);
+		}
+		
+		$top_ten_posts = array_slice( $top_ten_posts, 0, 10 );
 		
 		$data = array(
 			'total_likes'	=>	$total_likes

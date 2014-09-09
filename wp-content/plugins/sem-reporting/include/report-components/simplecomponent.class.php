@@ -18,16 +18,20 @@ class SimpleComponent
 				$objs = array();
 
 				//turn each object into array
-				foreach ( $val as $sub_val )
+				foreach ( $val as $sub_key => $sub_val )
 				{
 					//check if already an array
 					if ( is_array( $sub_val ) )
 					{
 						$objs = $val;
 					}
-					else
+					else if ( is_object( $sub_val ) )
 					{
 						$objs[] = $sub_val->to_array();
+					}
+					else
+					{
+						$objs[$sub_key] = $sub_val;
 					}
 				}
 

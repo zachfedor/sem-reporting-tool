@@ -17,6 +17,11 @@ class YouTubeComponent extends SimpleComponent
 		$this->demographics = $demographics;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return YouTubeDemographics::get_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );

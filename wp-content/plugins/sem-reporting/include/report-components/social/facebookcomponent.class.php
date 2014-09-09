@@ -12,6 +12,11 @@ class FacebookComponent extends SimpleComponent
 		$this->top_ten_posts = $top_ten_posts;
 	}
 	
+	public static function get_by_client( $client )
+	{
+		return Facebook::get_component( $client );
+	}
+	
 	public static function get_from_serialized_array( $serialized_array )
 	{
 		$unserialized_array = unserialize( $serialized_array );
@@ -24,7 +29,7 @@ class FacebookComponent extends SimpleComponent
 		$top_ten_posts = array();
 		foreach( $arr['top_ten_posts'] as $post )
 		{
-			$top_ten_posts[] = new FacebookPost( $post['content'], $post['engagement'], $post['reach ']);
+			$top_ten_posts[] = new FacebookPost( $post['content'], $post['engagement'], $post['reach'], $post['created_time'] );
 		}
 		
 		return new self( $arr['total_likes'], $arr['total_reach'], $arr['reach_breakdown'], $top_ten_posts );
@@ -39,7 +44,7 @@ class FacebookComponent extends SimpleComponent
 			Total Likes: <?php echo $this->total_likes; ?><br />
 			Total Reach: <?php echo $this->total_reach; ?><br />
 			Reach Breakdown:<br />
-			<table id="tbl-competitor-lik-metrics">
+			<table id="tbl-facebook-reach-breakdown">
 				<thead>
 			        <tr>
 			        	<th>Times Seen</th>
@@ -51,6 +56,27 @@ class FacebookComponent extends SimpleComponent
 			        <tr>
 			            <td><?php echo $times_seen; ?></td>
 			            <td><?php echo $num_people; ?></td>
+			        </tr>
+			        <?php } ?>
+			    </tbody>
+			</table>
+			Top Ten Posts:<br />
+			<table id="tbl-facebook-top-ten-posts">
+				<thead>
+			        <tr>
+			        	<th>Content</th>
+			        	<th>Engagement Rate</th>
+			        	<th>Reach</th>
+			        	<th>Created Date</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<?php foreach ( $this->top_ten_posts as $facebook_post ) { ?>
+			        <tr>
+			            <td><?php echo $facebook_post->get_content(); ?></td>
+			            <td><?php echo $facebook_post->get_engagement() * 100; ?>%</td>
+			            <td><?php echo $facebook_post->get_reach(); ?></td>
+			            <td><?php echo date( 'F j, Y', strtotime( $facebook_post->get_created_time() ) ); ?></td>
 			        </tr>
 			        <?php } ?>
 			    </tbody>

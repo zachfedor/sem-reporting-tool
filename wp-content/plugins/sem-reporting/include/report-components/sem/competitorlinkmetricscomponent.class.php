@@ -60,7 +60,7 @@ class CompetitorLinkMetricsComponent extends SimpleComponent
 		?>
 		<div id="dv-competitor-link-metrics-component">
 			<h3>Competitor Link Metrics</h3>
-			<table id="tbl-competitor-lik-metrics">
+			<table id="tbl-competitor-link-metrics">
 				<thead>
 			        <tr>
 			        	<th>Metric</th>

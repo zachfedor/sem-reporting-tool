@@ -8,22 +8,12 @@ class SocialReporting
 	
 	function generate_report()
 	{
-// 		$client = 'tower';
-// 		$client = 'fairmount';
-// 		$client = 'lrrcu';
-		$client = 'countrymeadows';
+		$client = 'tower';
 		
-		$test_component = CompetitorLinkMetricsComponent::get_by_client($client);
-		echo 'CompetitorLinkMetricsComponent: ' . $test_component->to_serialize() . '<br /><br /><br />';
-		
-		$test_component = DomainAuthorityComponent::get_by_client($client);
-		echo 'DomainAuthorityComponent: ' . $test_component->to_serialize() . '<br /><br /><br />';
-		
-		$test_component = OtherInfoComponent::get_by_client($client);
-		echo 'OtherInfoComponent: ' . $test_component->to_serialize() . '<br /><br /><br />';
-		
-		$test_component = VisitsComponent::get_by_client($client);
-		echo 'VisitsComponent: ' . $test_component->to_serialize() . '<br /><br /><br />';
+		$test_component = FacebookComponent::get_by_client($client);
+		echo '<pre>';
+		print_r($test_component->to_serialize());
+		echo '</pre>';// . '<br /><br /><br />';
 	}
 	
 	private static function get_clients()
