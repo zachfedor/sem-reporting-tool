@@ -29,6 +29,7 @@ class PinterestComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-pinterest-component">
+			<h3>Pinterest</h3>
 		
 		</div>
 		<?php

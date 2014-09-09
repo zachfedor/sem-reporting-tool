@@ -35,6 +35,7 @@ class FacebookComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-facebook-component">
+			<h3>Facebook</h3>
 			Total Likes: <?php echo $this->total_likes; ?><br />
 			Total Reach: <?php echo $this->total_reach; ?><br />
 			Reach Breakdown:<br />

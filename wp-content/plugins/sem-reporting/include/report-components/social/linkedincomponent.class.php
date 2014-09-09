@@ -43,7 +43,13 @@ class LinkedInComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-linked-in-component">
-		
+			<h3>LinkedIn</h3>
+			Total Followers: <?php echo $this->total_followers; ?><br />
+			New Followers: <?php echo $this->new_followers; ?><br />
+			Impressions: <?php echo $this->impressions; ?><br />
+			Engagement Rate: <?php echo $this->engagement_rate; ?><br />
+			Post Statistics:<br />
+			POST STATS HERE
 		</div>
 		<?php
 		$html = ob_get_clean();

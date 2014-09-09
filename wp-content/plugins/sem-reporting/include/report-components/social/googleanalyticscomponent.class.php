@@ -32,6 +32,7 @@ class GoogleAnalyticsComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-google-analytics-component">
+			<h3>Google Analytics</h3>
 			Total Sessions: <?php echo $this->total_sessions; ?><br />
 			Sessions Via Social Referral: <?php echo $this->sessions_social_referral; ?>
 		</div>

@@ -34,6 +34,7 @@ class OtherInfoComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-other-info-component">
+			<h3>Other Information</h3>
 			Sessions: <?php echo $this->sessions; ?><br />
 			Pages / Session: <?php echo $this->pages_per_session; ?><br />
 			Avg. Session Duration: <?php echo $this->average_session_duration; ?><br />

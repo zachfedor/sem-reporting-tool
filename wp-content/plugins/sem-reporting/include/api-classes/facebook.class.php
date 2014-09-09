@@ -24,7 +24,7 @@ class Facebook
 		return new FacebookComponent( $data['total_likes'], $data['total_reach'], $data['reach_breakdown'], $top_ten_posts );
 	}
 	
-	public static function get_data( $client )
+	private static function get_data( $client )
 	{
 		$creds = self::get_client_creds( $client );
 		

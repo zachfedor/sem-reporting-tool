@@ -59,6 +59,7 @@ class CompetitorLinkMetricsComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-competitor-link-metrics-component">
+			<h3>Competitor Link Metrics</h3>
 			<table id="tbl-competitor-lik-metrics">
 				<thead>
 			        <tr>

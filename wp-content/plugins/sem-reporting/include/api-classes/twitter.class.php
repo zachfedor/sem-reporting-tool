@@ -58,13 +58,30 @@ class Twitter
 	//don't have separate credentials for each client
 	private function get_client_creds( $client )
 	{
+		$creds = array(
+			'oauth_access_token' => '455221932-oy8lTdWFWz9wVLf9HbDt5SgvQjRMpXzhsUjghaaB'
+			, 'oauth_access_token_secret' => 'VFwPQaMuKiWA95Rby17sn0cNgHcLxVwWZOMZlzV8cffvq'
+			, 'consumer_key' => 'Q49HD2RjoUJqbxgCiAShj9zKx'
+			, 'consumer_secret' => 'ZJXIlqzkOGFOEudq5Ucsg3dZzkykok5bkGnNCO26tFMxDhRoy2'
+		);
+		
 		$clients = array(
 			'tower'	=>	array(
-				'oauth_access_token' => '455221932-oy8lTdWFWz9wVLf9HbDt5SgvQjRMpXzhsUjghaaB'
-				, 'oauth_access_token_secret' => 'VFwPQaMuKiWA95Rby17sn0cNgHcLxVwWZOMZlzV8cffvq'
+				'screen_name'	=>	'towermarketing'
+			)
+			, 'perkypet'	=>	array(
+				'screen_name'	=>	'PerkyPetFeeders'
+			)
+			, 'lrrcu'	=>	array(
+				'screen_name'	=>	'LANCREDROSE'
+			)
+			, 'ninjaflex'	=>	array(
+				'screen_name'	=>	'NinjaFlex3D'
 			)
 		);
 		
-		return $clients['tower'];
+		$creds = array_merge( $creds, $clients[$client] );
+		
+		return $creds;
 	}
 }

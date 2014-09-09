@@ -21,7 +21,7 @@ class SimpleComponent
 				foreach ( $val as $sub_val )
 				{
 					//check if already an array
-					if ( is_array( $val ) )
+					if ( is_array( $sub_val ) )
 					{
 						$objs = $val;
 					}

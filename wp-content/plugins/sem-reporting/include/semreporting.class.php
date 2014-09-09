@@ -11,6 +11,16 @@ class SEMReporting
 		
 	}
 	
+	private static function get_clients()
+	{
+		$clients = array(
+			'tower'
+			, 'fairmount'
+			, 'lrrcu'
+			, 'countrymeadows'
+		);
+	}
+	
 	function elog( $stuff )
 	{
 	  ob_start();

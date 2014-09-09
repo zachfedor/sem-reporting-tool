@@ -15,7 +15,7 @@ class LinkedInAnalytics
 			, $data['engagement_rate'], $post_stats );
 	}
 	
-	public static function get_data( $client )
+	private static function get_data( $client )
 	{
 		$creds = self::get_client_creds( $client );
 		

@@ -1,7 +1,0 @@
-2014-08-28 09:47:00: -- Analysis Started by On File Change 1st Full Analyze
-2014-08-28 09:47:08: Changes: 1, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 345
-2014-08-28 09:47:08: Left to Right: Copy File: 1 
-2014-08-28 09:47:08: == Sync Started by On File Change 1st Full Analyze
-2014-08-28 09:47:09: Copy Over '/Users/Adam/Documents/eclipsePHP/semreporting/semreporting/wp-content/plugins/sem-reporting/include/api-classes/googleanalytics.class.php' -> 'sftp://tower4.inetuhosted.net/sites/dev-sites/semreporting_stage/htdocs/wp-content/plugins/sem-reporting/include/api-classes/googleanalytics.class.php'
-2014-08-28 09:47:10: == Sync Complete. Time: 00:00:02, Speed: 6.1 KB/s, OK: 1, Errors: 0
-2014-08-28 09:47:11: 

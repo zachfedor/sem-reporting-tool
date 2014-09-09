@@ -32,6 +32,7 @@ class TwitterComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-twitter-component">
+			<h3>Twitter</h3>
 			Total Followers: <?php echo $this->total_followers; ?><br />
 			Total Following: <?php echo $this->total_following; ?>
 		</div>
