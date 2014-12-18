@@ -40,8 +40,7 @@ class DomainAuthorityComponent extends SimpleComponent
 		<div id="dv-domain-authority-component">
 			<h3>Domain Authority</h3>
 			<div id="dv-domain-authority">
-				<?php echo $this->domain_authority; ?><br />
-				Domain Authority
+				Your Domain Authority: <?php echo $this->domain_authority; ?><br />
 			</div>
 			<div id="dv-domain-authority-competitors">
 				<table>

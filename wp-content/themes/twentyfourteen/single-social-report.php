@@ -7,6 +7,10 @@ get_header(); ?>
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
+				
+					?><h1><?php the_title(); ?></h1><?php
+				
+					the_content();
 
 					$post_meta = get_post_meta( get_the_ID() );
 					

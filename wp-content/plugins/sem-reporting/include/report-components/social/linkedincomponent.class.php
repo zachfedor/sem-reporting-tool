@@ -47,7 +47,7 @@ class LinkedInComponent extends SimpleComponent
 			Total Followers: <?php echo $this->total_followers; ?><br />
 			New Followers: <?php echo $this->new_followers; ?><br />
 			Impressions: <?php echo $this->impressions; ?><br />
-			Engagement Rate: <?php echo $this->engagement_rate; ?><br />
+			Engagement Rate: <?php echo $this->engagement_rate * 100; ?>%<br />
 			Post Statistics:<br />
 			POST STATS HERE
 		</div>

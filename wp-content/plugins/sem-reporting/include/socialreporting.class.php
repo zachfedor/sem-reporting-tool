@@ -8,7 +8,7 @@ class SocialReporting
 	
 	function generate_report()
 	{
-		$client = 'tower';
+		$client = 'perkypet';
 		
 		$test_component = FacebookComponent::get_by_client($client);
 		echo '<pre>';

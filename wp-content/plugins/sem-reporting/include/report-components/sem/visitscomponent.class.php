@@ -39,19 +39,19 @@ class VisitsComponent extends SimpleComponent
 		?>
 		<div id="dv-visits-component">
 		<h3>Visits</h3>
-			<div id="dv-total-visits"><?php echo $this->total_visits; ?> Total Visits</div>
+			<div id="dv-total-visits">Total Visits: <?php echo $this->total_visits; ?></div>
 			<div id="dv-visits-breakdown">
 				<table>
 					<thead>
 			        <tr>
 			        	<th>Visit Type</th>
-			        	<th>#</th>
+			        	<th>Number of Visits</th>
 			        </tr>
 			    </thead>
 			    <tbody>
 			    	<?php foreach ( $this->visits as $visit_type ) { ?>
 			        <tr>
-			        	<td><?php echo $visit_type->get_type(); ?></td>
+			        	<td><?php echo ucfirst( $visit_type->get_type() ); ?></td>
 			        	<td><?php echo $visit_type->get_num_visits(); ?></td>
 			        </tr>
 			        <?php } ?>
