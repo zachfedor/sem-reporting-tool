@@ -1,0 +1,55 @@
+.single-sem-report, .single-social-report {
+  text-align: center;
+  color: #000000; }
+  .single-sem-report .report-component, .single-social-report .report-component {
+    width: 50%;
+    min-width: 300px;
+    padding-right: -15px;
+    padding-left: -15px; }
+    .single-sem-report .report-component .rc-title, .single-social-report .report-component .rc-title {
+      margin: 0 15px 15px;
+      padding: 5px;
+      background-color: #C3D500;
+      color: #ffffff; }
+    .single-sem-report .report-component .rc-content, .single-social-report .report-component .rc-content {
+      border-bottom: 1px solid #bbbbbb;
+      margin-bottom: 15px; }
+      .single-sem-report .report-component .rc-content .rc-col, .single-social-report .report-component .rc-content .rc-col {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        border-right: 1px solid #bbbbbb;
+        padding-right: 15px;
+        padding-left: 15px; }
+        .single-sem-report .report-component .rc-content .rc-col.clearfix, .single-social-report .report-component .rc-content .rc-col.clearfix {
+          border: none; }
+      .single-sem-report .report-component .rc-content .rc-subtitle, .single-social-report .report-component .rc-content .rc-subtitle {
+        font-weight: normal; }
+      .single-sem-report .report-component .rc-content .rc-heading, .single-social-report .report-component .rc-content .rc-heading {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 5px; }
+      .single-sem-report .report-component .rc-content .rc-data, .single-social-report .report-component .rc-content .rc-data {
+        background-color: #777777;
+        color: #text;
+        padding: 5px; }
+      .single-sem-report .report-component .rc-content .rc-table, .single-social-report .report-component .rc-content .rc-table {
+        border: none;
+        border-collapse: separate;
+        border-spacing: 5px;
+        padding: 0;
+        margin: 15px; }
+        .single-sem-report .report-component .rc-content .rc-table .rc-table-head, .single-social-report .report-component .rc-content .rc-table .rc-table-head {
+          padding: 5px;
+          background-color: #000000;
+          color: #ffffff; }
+        .single-sem-report .report-component .rc-content .rc-table .rc-table-dark, .single-social-report .report-component .rc-content .rc-table .rc-table-dark {
+          padding: 5px;
+          background-color: #777777;
+          color: #000000; }
+        .single-sem-report .report-component .rc-content .rc-table .rc-table-light, .single-social-report .report-component .rc-content .rc-table .rc-table-light {
+          padding: 5px;
+          background-color: #bbbbbb;
+          color: #000000; }
+
+/*# sourceMappingURL=reports.css.map */

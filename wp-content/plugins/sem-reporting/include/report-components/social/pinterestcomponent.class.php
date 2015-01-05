@@ -28,9 +28,11 @@ class PinterestComponent extends SimpleComponent
 	{
 		ob_start();
 		?>
-		<div id="dv-pinterest-component">
-			<h3>Pinterest</h3>
-		
+		<div id="dv-pinterest-component" class="report-component">
+			<h3 class="rc-title">Pinterest</h3>
+
+            <div class="rc-content">
+            </div>
 		</div>
 		<?php
 		$html = ob_get_clean();

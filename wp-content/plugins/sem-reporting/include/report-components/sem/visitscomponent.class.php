@@ -37,7 +37,7 @@ class VisitsComponent extends SimpleComponent
 	{
 		ob_start();
 		?>
-		<div id="dv-visits-component">
+		<div id="dv-visits-component" class="report-component">
 		<h3>Visits</h3>
 			<div id="dv-total-visits">Total Visits: <?php echo $this->total_visits; ?></div>
 			<div id="dv-visits-breakdown">

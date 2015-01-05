@@ -1,0 +1,87 @@
+$accent: #C3D500;
+$accent2: #000000;
+$text: #000000;
+$text2: #ffffff;
+$lgrey: #bbbbbb;
+$dgrey: #777777;
+
+$space: 15px;
+
+.single-sem-report, .single-social-report {
+  text-align: center;
+  color: $text;
+
+  .report-component {
+    width: 50%;
+    min-width: 300px;
+    padding-right: -$space;
+    padding-left: -$space;
+
+    .rc-title {
+      margin: 0 $space $space;
+      padding: 5px;
+      background-color: $accent;
+      color: $text2;
+    }
+
+    .rc-content {
+      border-bottom: 1px solid $lgrey;
+      margin-bottom: $space;
+
+      .rc-col {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        border-right: 1px solid $lgrey;
+        padding-right: $space;
+        padding-left: $space;
+
+        &.clearfix {
+          border: none;
+        }
+      }
+
+      .rc-subtitle {
+        font-weight: normal;
+      }
+
+      .rc-heading {
+        background-color: $accent2;
+        color: $text2;
+        padding: 5px;
+      }
+
+      .rc-data {
+        background-color: $dgrey;
+        color: #text;
+        padding: 5px;
+      }
+
+      .rc-table {
+        border: none;
+        border-collapse: separate;
+        border-spacing: 5px;
+        padding: 0;
+        margin: $space;
+
+        .rc-table-head {
+          padding: 5px;
+          background-color: $accent2;
+          color: $text2;
+        }
+
+        .rc-table-dark {
+          padding: 5px;
+          background-color: $dgrey;
+          color: $text;
+        }
+
+        .rc-table-light {
+          padding: 5px;
+          background-color: $lgrey;
+          color: $text;
+        }
+      }
+    }
+  }
+}

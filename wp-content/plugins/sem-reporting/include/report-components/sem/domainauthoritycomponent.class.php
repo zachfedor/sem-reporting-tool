@@ -37,7 +37,7 @@ class DomainAuthorityComponent extends SimpleComponent
 	{
 		ob_start();
 		?>
-		<div id="dv-domain-authority-component">
+		<div id="dv-domain-authority-component" class="report-component">
 			<h3>Domain Authority</h3>
 			<div id="dv-domain-authority">
 				Your Domain Authority: <?php echo $this->domain_authority; ?><br />
