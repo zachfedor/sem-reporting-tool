@@ -2,54 +2,124 @@
   text-align: center;
   color: #000000; }
   .single-sem-report .report-component, .single-social-report .report-component {
-    width: 50%;
+    width: 65%;
     min-width: 300px;
-    padding-right: -15px;
-    padding-left: -15px; }
+    margin: 2rem auto; }
     .single-sem-report .report-component .rc-title, .single-social-report .report-component .rc-title {
-      margin: 0 15px 15px;
-      padding: 5px;
+      padding: 10px;
       background-color: #C3D500;
       color: #ffffff; }
+    .single-sem-report .report-component .rc-full, .single-social-report .report-component .rc-full {
+      margin-bottom: 2rem; }
     .single-sem-report .report-component .rc-content, .single-social-report .report-component .rc-content {
       border-bottom: 1px solid #bbbbbb;
-      margin-bottom: 15px; }
+      margin-bottom: calc(2 * 2rem);
+      overflow: hidden;
+      transition: max-height 2s;
+      -moz-transition: max-height 2s;
+      /* Firefox 4 */
+      -webkit-transition: max-height 2s;
+      /* Safari and Chrome */
+      -o-transition: max-height 2s;
+      /* Opera */ }
       .single-sem-report .report-component .rc-content .rc-col, .single-social-report .report-component .rc-content .rc-col {
         width: 50%;
         float: left;
         box-sizing: border-box;
-        border-right: 1px solid #bbbbbb;
-        padding-right: 15px;
-        padding-left: 15px; }
-        .single-sem-report .report-component .rc-content .rc-col.clearfix, .single-social-report .report-component .rc-content .rc-col.clearfix {
-          border: none; }
+        margin-bottom: 2rem; }
+        .single-sem-report .report-component .rc-content .rc-col.rc-col-one, .single-social-report .report-component .rc-content .rc-col.rc-col-one {
+          padding-right: 15px; }
+        .single-sem-report .report-component .rc-content .rc-col.rc-col-two, .single-social-report .report-component .rc-content .rc-col.rc-col-two {
+          padding-left: 15px;
+          border-left: 1px solid #bbbbbb; }
+        @media (max-width: 60em) {
+          .single-sem-report .report-component .rc-content .rc-col, .single-social-report .report-component .rc-content .rc-col {
+            width: 100%; }
+            .single-sem-report .report-component .rc-content .rc-col.rc-col-one, .single-sem-report .report-component .rc-content .rc-col.rc-col-two, .single-social-report .report-component .rc-content .rc-col.rc-col-one, .single-social-report .report-component .rc-content .rc-col.rc-col-two {
+              padding: 0;
+              border: none; } }
       .single-sem-report .report-component .rc-content .rc-subtitle, .single-social-report .report-component .rc-content .rc-subtitle {
-        font-weight: normal; }
+        font-weight: normal;
+        margin: 0 0 2rem;
+        padding: 0; }
       .single-sem-report .report-component .rc-content .rc-heading, .single-social-report .report-component .rc-content .rc-heading {
         background-color: #000000;
         color: #ffffff;
-        padding: 5px; }
+        padding: 10px;
+        margin: 0 0 15px; }
       .single-sem-report .report-component .rc-content .rc-data, .single-social-report .report-component .rc-content .rc-data {
         background-color: #777777;
         color: #text;
-        padding: 5px; }
+        padding: 10px;
+        margin: 0 0 2rem; }
+        .single-sem-report .report-component .rc-content .rc-data:last-child, .single-social-report .report-component .rc-content .rc-data:last-child {
+          margin-bottom: 0; }
       .single-sem-report .report-component .rc-content .rc-table, .single-social-report .report-component .rc-content .rc-table {
         border: none;
         border-collapse: separate;
-        border-spacing: 5px;
+        border-spacing: 15px;
         padding: 0;
-        margin: 15px; }
+        margin: -15px;
+        width: 101%;
+        width: -webkit-calc(15px * 2 + 100%);
+        width: -moz-calc(15px * 2 + 100%);
+        width: calc(15px * 2 + 100%); }
+        .single-sem-report .report-component .rc-content .rc-table td, .single-sem-report .report-component .rc-content .rc-table th, .single-social-report .report-component .rc-content .rc-table td, .single-social-report .report-component .rc-content .rc-table th {
+          padding: 10px;
+          text-align: center;
+          border: none;
+          vertical-align: middle; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-head, .single-social-report .report-component .rc-content .rc-table .rc-table-head {
-          padding: 5px;
           background-color: #000000;
           color: #ffffff; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-dark, .single-social-report .report-component .rc-content .rc-table .rc-table-dark {
-          padding: 5px;
           background-color: #777777;
           color: #000000; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-light, .single-social-report .report-component .rc-content .rc-table .rc-table-light {
-          padding: 5px;
           background-color: #bbbbbb;
           color: #000000; }
+          .single-sem-report .report-component .rc-content .rc-table .rc-table-light span, .single-social-report .report-component .rc-content .rc-table .rc-table-light span {
+            display: none; }
+        @media (max-width: 60em) {
+          .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts {
+            border-spacing: 0;
+            width: 100%;
+            margin: 0; }
+            .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts thead, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts thead {
+              display: none; }
+            .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr {
+              position: relative;
+              display: block;
+              margin-bottom: 2rem;
+              border-top: 1px solid #bbbbbb;
+              padding-top: 2rem; }
+              .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr:after, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr:after {
+                content: "";
+                display: table;
+                clear: both; }
+              .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr:last-child, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts tr:last-child {
+                margin-bottom: 0; }
+            .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-dark, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-dark {
+              display: block;
+              padding: 10px; }
+            .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-light, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-light {
+              display: block;
+              float: left;
+              margin-top: 15px;
+              width: 33.33333%;
+              box-sizing: border-box; }
+              .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-light span, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts .rc-table-light span {
+                display: block;
+                font-weight: bold;
+                background-color: #000000;
+                color: #ffffff;
+                margin: -10px;
+                margin-bottom: 10px;
+                padding: 10px; } }
+      .single-sem-report .report-component .rc-content hr, .single-social-report .report-component .rc-content hr {
+        border: 0;
+        height: 1px;
+        background-color: #bbbbbb;
+        width: 100%; }
 
 /*# sourceMappingURL=reports.css.map */

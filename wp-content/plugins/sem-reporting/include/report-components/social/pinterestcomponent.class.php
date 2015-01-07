@@ -29,7 +29,7 @@ class PinterestComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-pinterest-component" class="report-component">
-			<h3 class="rc-title">Pinterest</h3>
+			<h3 class="rc-title rc-full">Pinterest</h3>
 
             <div class="rc-content">
             </div>

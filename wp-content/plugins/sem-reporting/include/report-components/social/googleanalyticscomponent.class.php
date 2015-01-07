@@ -32,14 +32,14 @@ class GoogleAnalyticsComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-google-analytics-component" class="report-component">
-			<h3 class="rc-title">Google Analytics</h3>
+			<h3 class="rc-title rc-full">Google Analytics</h3>
 
             <div class="rc-content">
-                <div class="rc-col">
+                <div class="rc-col rc-col-one">
                     <h5 class="rc-heading">Total Sessions</h5>
                     <p class="rc-data"><?php echo $this->total_sessions; ?></p>
                 </div>
-                <div class="rc-col">
+                <div class="rc-col rc-col-two">
                     <h5 class="rc-header">Sessions Via Social Referral</h5>
                     <p class="rc-data"><?php echo $this->sessions_social_referral; ?></p>
                 </div>

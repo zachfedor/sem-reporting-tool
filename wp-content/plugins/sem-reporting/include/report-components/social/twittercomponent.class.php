@@ -32,34 +32,36 @@ class TwitterComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-twitter-component" class="report-component">
-			<h3 class="rc-title">Twitter</h3>
+			<h3 class="rc-title rc-full">Twitter</h3>
             <div class="rc-content">
-                <table class="rc-table">
-                    <thead>
-                        <tr>
-                            <th class="rc-table-head">Date</th>
-                            <th class="rc-table-head"># Followers</th>
-                            <th class="rc-table-head"># Following</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rc-table-dark">This Month</td>
-                            <td class="rc-table-light"><?php echo $this->total_followers; ?></td>
-                            <td class="rc-table-light"><?php echo $this->total_following; ?></td>
-                        </tr>
-                        <tr>
-                            <td class="rc-table-dark">Last Month</td>
-                            <td class="rc-table-light"></td>
-                            <td class="rc-table-light"></td>
-                        </tr>
-                        <tr>
-                            <td class="rc-table-dark">2 Months Ago</td>
-                            <td class="rc-table-light"></td>
-                            <td class="rc-table-light"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="rc-full">
+                    <table class="rc-table">
+                        <thead>
+                            <tr>
+                                <th class="rc-table-head">Date</th>
+                                <th class="rc-table-head"># Followers</th>
+                                <th class="rc-table-head"># Following</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="rc-table-dark">This Month</td>
+                                <td class="rc-table-light"><?php echo $this->total_followers; ?></td>
+                                <td class="rc-table-light"><?php echo $this->total_following; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="rc-table-dark">Last Month</td>
+                                <td class="rc-table-light"></td>
+                                <td class="rc-table-light"></td>
+                            </tr>
+                            <tr>
+                                <td class="rc-table-dark">2 Months Ago</td>
+                                <td class="rc-table-light"></td>
+                                <td class="rc-table-light"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 		</div>
 		<?php

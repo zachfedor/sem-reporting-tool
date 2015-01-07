@@ -43,16 +43,16 @@ class LinkedInComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-linked-in-component" class="report-component">
-			<h3 class="rc-title">LinkedIn</h3>
+			<h3 class="rc-title rc-full">LinkedIn</h3>
 
             <div class="rc-content">
-                <div class="rc-col">
+                <div class="rc-col rc-col-one">
                     <h5 class="rc-heading">Total Followers</h5>
                     <p class="rc-data"><?php echo $this->total_followers; ?></p>
                     <h5 class="rc-heading">New Followers</h5>
                     <p class="rc-data"><?php echo $this->new_followers; ?></p>
                 </div>
-                <div class="rc-col">
+                <div class="rc-col rc-col-two">
                     <h5 class="rc-heading">Impressions</h5>
                     <p class="rc-data"><?php echo $this->impressions; ?></p>
                     <h5 class="rc-heading">Engagement Rate</h5>
