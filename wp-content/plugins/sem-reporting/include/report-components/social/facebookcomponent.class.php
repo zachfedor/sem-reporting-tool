@@ -43,35 +43,33 @@ class FacebookComponent extends SimpleComponent
 			<h3 class="rc-title rc-full">Facebook</h3>
 
             <div class="rc-content">
-                <div class="clearfix">
-                    <div class="rc-col rc-col-one">
+                <div class="rc-col rc-col-one">
 
-                        <h4 class="rc-subtitle">Totals</h4>
-                        <h5 class="rc-heading">Total Likes</h5>
-                        <p class="rc-data"><?php echo $this->total_likes; ?></p>
-                        <hr/>
-                        <h5 class="rc-heading">Total Reach</h5>
-                        <p class="rc-data"><?php echo $this->total_reach; ?></p>
-                    </div>
-                    <div class="rc-col rc-col-two">
-                        <h4 class="rc-subtitle">Reach Breakdown</h4>
-                        <table id="tbl-facebook-reach-breakdown" class="rc-table">
-                            <thead>
-                                <tr>
-                                    <th class="rc-table-head">Times Seen</th>
-                                    <th class="rc-table-head"># People</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ( $this->reach_breakdown as $times_seen => $num_people ) { ?>
-                                <tr>
-                                    <td class="rc-table-dark"><?php echo $times_seen; ?></td>
-                                    <td class="rc-table-light"><?php echo $num_people; ?></td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h4 class="rc-subtitle">Totals</h4>
+                    <h5 class="rc-heading">Total Likes</h5>
+                    <p class="rc-data"><?php echo $this->total_likes; ?></p>
+                    <hr/>
+                    <h5 class="rc-heading">Total Reach</h5>
+                    <p class="rc-data"><?php echo $this->total_reach; ?></p>
+                </div>
+                <div class="rc-col rc-col-two">
+                    <h4 class="rc-subtitle">Reach Breakdown</h4>
+                    <table id="tbl-facebook-reach-breakdown" class="rc-table">
+                        <thead>
+                            <tr>
+                                <th class="rc-table-head">Times Seen</th>
+                                <th class="rc-table-head"># People</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ( $this->reach_breakdown as $times_seen => $num_people ) { ?>
+                            <tr>
+                                <td class="rc-table-dark"><?php echo $times_seen; ?></td>
+                                <td class="rc-table-light"><?php echo $num_people; ?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="rc-full">

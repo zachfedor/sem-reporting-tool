@@ -9,6 +9,8 @@ $gutter: 15px;
 $spacer: 2rem;
 $padding: 10px;
 
+$break: 60em;
+
 .single-sem-report, .single-social-report {
   text-align: center;
   color: $text;
@@ -37,7 +39,7 @@ $padding: 10px;
     .rc-content {
       border-bottom: 1px solid $lgrey;
       margin-bottom: calc(2 * #{$spacer});
-      overflow: hidden;
+//      overflow: hidden;
 //      max-height: 0px;
       transition: max-height 2s;
       -moz-transition: max-height 2s; /* Firefox 4 */
@@ -59,7 +61,7 @@ $padding: 10px;
           border-left: 1px solid $lgrey;
         }
 
-        @media (max-width: 60em) {
+        @media (max-width: $break) {
           width: 100%;
 
           &.rc-col-one, &.rc-col-two {
@@ -91,6 +93,19 @@ $padding: 10px;
         &:last-child {
           margin-bottom: 0;
         }
+
+        &.rc-data-accent {
+          background-color: $accent;
+        }
+
+        &.rc-data-big {
+          font-size: 150%;
+          padding: calc(#{#padding} * 2);
+        }
+      }
+
+      .rc-piegraph {
+
       }
 
       .rc-table {
@@ -103,6 +118,7 @@ $padding: 10px;
         width: -webkit-calc(#{$gutter} * 2 + 100%);
         width: -moz-calc(#{$gutter} * 2 + 100%);
         width: calc(#{$gutter} * 2 + 100%);
+        table-layout: fixed;
 
         td, th {
           padding: $padding;
@@ -114,6 +130,9 @@ $padding: 10px;
         .rc-table-head {
           background-color: $accent2;
           color: $text2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .rc-table-dark {
@@ -130,7 +149,29 @@ $padding: 10px;
           }
         }
 
-        @media (max-width: 60em) {
+        .rc-table-white {
+          border-bottom: 1px solid #accent2;
+        }
+
+        .rc-table-green {
+          border-bottom: 1px solid #accent2;
+          background-color: $accent;
+        }
+
+        &#tbl-competitor-link-metrics {
+          border-collapse: collapse;
+          border-spacing: 0;
+          border-left: 1px solid $accent2;
+          border-right: 1px solid $accent2;
+          width: 100%;
+          margin: 0;
+
+          tbody tr {
+            border-bottom: 1px solid $accent2;
+          }
+        }
+
+        @media (max-width: $break) {
           &#tbl-facebook-top-ten-posts {
             border-spacing: 0;
             width: 100%;
@@ -181,6 +222,10 @@ $padding: 10px;
               }
             }
           }
+
+          #tbl-competitor-link-metrics {
+            
+          }
         }
       }
 
@@ -189,7 +234,15 @@ $padding: 10px;
         height: 1px;
         background-color: $lgrey;
         width: 100%;
+        margin-bottom: $spacer;
+        margin-top: 0;
       }
+    }
+
+    .rc-clear:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 }

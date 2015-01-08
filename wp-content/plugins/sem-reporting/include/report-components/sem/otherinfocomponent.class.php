@@ -34,11 +34,91 @@ class OtherInfoComponent extends SimpleComponent
 		ob_start();
 		?>
 		<div id="dv-other-info-component" class="report-component">
-			<h3>Other Information</h3>
-			Sessions: <?php echo $this->sessions; ?><br />
-			Pages / Session: <?php echo $this->pages_per_session; ?><br />
-			Avg. Session Duration: <?php echo $this->average_session_duration; ?><br />
-			Bounce Rate: <?php echo $this->bounce_rate; ?>%<br />
+			<h3 class="rc-title rc-full">Other Information</h3>
+
+            <div class="rc-content">
+                <div class="rc-clear">
+                    <div class="rc-col rc-col-one">
+                        <h5 class="rc-heading">Sessions / Visits</h5>
+                        <p class="rc-data"><?php echo $this->sessions; ?></p>
+                    </div>
+                    <div class="rc-col rc-col-two">
+                        <table class="rc-table">
+                            <tr>
+                                <th class="rc-table-head">3 Months Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                            <tr>
+                                <th class="rc-table-head">One Year Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="rc-clear">
+                    <div class="rc-col rc-col-one">
+                        <h5 class="rc-heading">Avg. Session Duration:</h5>
+                        <p class="rc-data"><?php echo $this->average_session_duration; ?></p>
+                    </div>
+                    <div class="rc-col rc-col-two">
+                        <table class="rc-table">
+                            <tr>
+                                <th class="rc-table-head">3 Months Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                            <tr>
+                                <th class="rc-table-head">One Year Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="rc-clear">
+                    <div class="rc-col rc-col-one">
+                        <h5 class="rc-heading">Pages / Session:</h5>
+                        <p class="rc-data"><?php echo $this->pages_per_session; ?></p>
+                    </div>
+                    <div class="rc-col rc-col-two">
+                        <table class="rc-table">
+                            <tr>
+                                <th class="rc-table-head">3 Months Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                            <tr>
+                                <th class="rc-table-head">One Year Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="rc-clear">
+                    <div class="rc-col rc-col-one">
+                        <h5 class="rc-heading">Bounce Rate:</h5>
+                        <p class="rc-data"><?php echo $this->bounce_rate; ?>%</p>
+                    </div>
+                    <div class="rc-col rc-col-two">
+                        <table class="rc-table">
+                            <tr>
+                                <th class="rc-table-head">3 Months Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                            <tr>
+                                <th class="rc-table-head">One Year Ago</th>
+                                <td class="rc-table-light">xxx</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+             </div>
 		</div>
 		<?php
 		$html = ob_get_clean();

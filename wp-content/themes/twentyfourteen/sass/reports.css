@@ -14,7 +14,6 @@
     .single-sem-report .report-component .rc-content, .single-social-report .report-component .rc-content {
       border-bottom: 1px solid #bbbbbb;
       margin-bottom: calc(2 * 2rem);
-      overflow: hidden;
       transition: max-height 2s;
       -moz-transition: max-height 2s;
       /* Firefox 4 */
@@ -54,6 +53,11 @@
         margin: 0 0 2rem; }
         .single-sem-report .report-component .rc-content .rc-data:last-child, .single-social-report .report-component .rc-content .rc-data:last-child {
           margin-bottom: 0; }
+        .single-sem-report .report-component .rc-content .rc-data.rc-data-accent, .single-social-report .report-component .rc-content .rc-data.rc-data-accent {
+          background-color: #C3D500; }
+        .single-sem-report .report-component .rc-content .rc-data.rc-data-big, .single-social-report .report-component .rc-content .rc-data.rc-data-big {
+          font-size: 150%;
+          padding: calc(#padding * 2); }
       .single-sem-report .report-component .rc-content .rc-table, .single-social-report .report-component .rc-content .rc-table {
         border: none;
         border-collapse: separate;
@@ -63,7 +67,8 @@
         width: 101%;
         width: -webkit-calc(15px * 2 + 100%);
         width: -moz-calc(15px * 2 + 100%);
-        width: calc(15px * 2 + 100%); }
+        width: calc(15px * 2 + 100%);
+        table-layout: fixed; }
         .single-sem-report .report-component .rc-content .rc-table td, .single-sem-report .report-component .rc-content .rc-table th, .single-social-report .report-component .rc-content .rc-table td, .single-social-report .report-component .rc-content .rc-table th {
           padding: 10px;
           text-align: center;
@@ -71,7 +76,10 @@
           vertical-align: middle; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-head, .single-social-report .report-component .rc-content .rc-table .rc-table-head {
           background-color: #000000;
-          color: #ffffff; }
+          color: #ffffff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-dark, .single-social-report .report-component .rc-content .rc-table .rc-table-dark {
           background-color: #777777;
           color: #000000; }
@@ -80,6 +88,20 @@
           color: #000000; }
           .single-sem-report .report-component .rc-content .rc-table .rc-table-light span, .single-social-report .report-component .rc-content .rc-table .rc-table-light span {
             display: none; }
+        .single-sem-report .report-component .rc-content .rc-table .rc-table-white, .single-social-report .report-component .rc-content .rc-table .rc-table-white {
+          border-bottom: 1px solid #accent2; }
+        .single-sem-report .report-component .rc-content .rc-table .rc-table-green, .single-social-report .report-component .rc-content .rc-table .rc-table-green {
+          border-bottom: 1px solid #accent2;
+          background-color: #C3D500; }
+        .single-sem-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics, .single-social-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics {
+          border-collapse: collapse;
+          border-spacing: 0;
+          border-left: 1px solid #000000;
+          border-right: 1px solid #000000;
+          width: 100%;
+          margin: 0; }
+          .single-sem-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics tbody tr, .single-social-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics tbody tr {
+            border-bottom: 1px solid #000000; }
         @media (max-width: 60em) {
           .single-sem-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts, .single-social-report .report-component .rc-content .rc-table#tbl-facebook-top-ten-posts {
             border-spacing: 0;
@@ -120,6 +142,12 @@
         border: 0;
         height: 1px;
         background-color: #bbbbbb;
-        width: 100%; }
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-top: 0; }
+    .single-sem-report .report-component .rc-clear:after, .single-social-report .report-component .rc-clear:after {
+      content: "";
+      display: table;
+      clear: both; }
 
 /*# sourceMappingURL=reports.css.map */
