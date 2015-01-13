@@ -49,6 +49,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
  */
 
 
+@import url("sass/reports.css");
+
+
 /**
  * 1.0 Reset
  *
@@ -819,7 +822,6 @@ span + .edit-link:before,
 
 .site {
 	background-color: #fff;
-	max-width: 1260px;
 	position: relative;
 }
 

@@ -58,31 +58,36 @@ class CompetitorLinkMetricsComponent extends SimpleComponent
 	{
 		ob_start();
 		?>
-		<div id="dv-competitor-link-metrics-component">
-			<h3>Competitor Link Metrics</h3>
-			<table id="tbl-competitor-link-metrics">
-				<thead>
-			        <tr>
-			        	<th>Metric</th>
-			        	<th><?php echo $this->link_metrics->get_link(); ?></th>
-			        	<?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
-			            <th><?php echo $competitor->get_link(); ?></th>
-			            <?php } ?>
-			        </tr>
-			    </thead>
-			    <tbody>
-			    	<?php foreach ( $this->link_metrics->get_metrics() as $row => $metric ) { ?>
-			        <tr>
-			            <td><?php echo $metric->get_name(); ?></td>
-			            <td><?php echo $metric->get_value(); ?></td>
-			            <?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
-	            		<td><?php $competitor_metrics = $competitor->get_metrics(); echo $competitor_metrics[$row]->get_value(); ?></td>
-			            <?php } ?>
-			        </tr>
-			        <?php } ?>
-			    </tbody>
-			</table>
-		</div>
+		<div id="dv-competitor-link-metrics-component" class="report-component">
+			<h3 class="rc-title rc-full">Competitor Link Metrics</h3>
+
+            <div class="rc-content">
+                <div class="rc-full">
+                    <table id="tbl-competitor-link-metrics" class="rc-table">
+                        <thead>
+                            <tr>
+                                <th class="rc-table-head">Metric</th>
+                                <th class="rc-table-green" title="<?php echo $this->link_metrics->get_link(); ?>"><?php echo $this->link_metrics->get_link(); ?></th>
+                                <?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
+                                <th class="rc-table-head" title="<?php echo $competitor->get_link(); ?>"><?php echo $competitor->get_link(); ?></th>
+                                <?php } ?>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ( $this->link_metrics->get_metrics() as $row => $metric ) { ?>
+                            <tr>
+                                <td class="rc-table-white"><?php echo $metric->get_name(); ?></td>
+                                <td class="rc-table-green"><?php echo $metric->get_value(); ?></td>
+                                <?php foreach ( $this->competitor_link_metrics as $competitor ) { ?>
+                                <td class="rc-table-white"><?php $competitor_metrics = $competitor->get_metrics(); echo $competitor_metrics[$row]->get_value(); ?></td>
+                                <?php } ?>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 		<?php
 		$html = ob_get_clean();
 		
