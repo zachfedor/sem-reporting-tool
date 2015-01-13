@@ -10,7 +10,7 @@ class SocialReporting
 	{
 		$client = 'tower';
 		
-		$test_component = YouTubeComponent::get_by_client($client);
+		$test_component = GoogleAnalyticsComponent::get_by_client($client);
 		echo '<pre>';
 		print_r($test_component->to_json());
 		echo '</pre>';// . '<br /><br /><br />';
