@@ -43,7 +43,7 @@ class PinterestComponent extends SimpleComponent
 	    return $this->pins_from_website;
 	}
 
-	public function get_imporessions()
+	public function get_impressions()
 	{
 	    return $this->imporessions;
 	}

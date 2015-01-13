@@ -8,9 +8,9 @@ class SocialReporting
 	
 	function generate_report()
 	{
-		$client = 'perkypet';
+		$client = 'tower';
 		
-		$test_component = FacebookComponent::get_by_client($client);
+		$test_component = YouTubeComponent::get_by_client($client);
 		echo '<pre>';
 		print_r($test_component->to_serialize());
 		echo '</pre>';// . '<br /><br /><br />';

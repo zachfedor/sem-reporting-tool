@@ -15,7 +15,7 @@ class LinkedInComponent extends SimpleComponent
 	
 	public static function get_by_client( $client )
 	{
-		return LinkedIn::get_component( $client );
+		return LinkedInAnalytics::get_component( $client );
 	}
 	
 	public static function get_from_serialized_array( $serialized_array )
