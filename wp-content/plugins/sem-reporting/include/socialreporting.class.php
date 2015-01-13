@@ -12,7 +12,7 @@ class SocialReporting
 		
 		$test_component = YouTubeComponent::get_by_client($client);
 		echo '<pre>';
-		print_r($test_component->to_serialize());
+		print_r($test_component->to_json());
 		echo '</pre>';// . '<br /><br /><br />';
 	}
 	

@@ -9,11 +9,11 @@ class CompetitorMentionsComponent extends SimpleComponent
 		$this->competitor_mentions = $competitor_mentions;
 	}
 	
-	public static function get_from_serialized_array( $serialized_array )
+	public static function get_from_json( $json )
 	{
-		$unserialized_array = unserialize( $serialized_array );
+		$arr = json_decode( $json );
 		
-		return self::get_from_array( $unserialized_array );
+		return self::get_from_array( $arr );
 	}
 	
 	public static function get_from_array( $arr )

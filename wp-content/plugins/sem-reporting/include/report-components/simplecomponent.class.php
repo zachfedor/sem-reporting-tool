@@ -53,8 +53,8 @@ class SimpleComponent
 		return $arr;
 	}
 
-	public function to_serialize()
+	public function to_json()
 	{
-		return serialize( $this->to_array() );
+		return json_encode( $this->to_array() );
 	}
 }
