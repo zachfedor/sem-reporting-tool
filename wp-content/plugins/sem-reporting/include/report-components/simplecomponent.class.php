@@ -57,4 +57,15 @@ class SimpleComponent
 	{
 		return json_encode( $this->to_array() );
 	}
+
+	public function to_html()
+	{
+		ob_start();
+
+		include_once( 'social/views/' . strtolower( get_class( $this ) )  . '.view.php' );
+
+		$html = ob_get_clean();
+
+		return $html;
+	}
 }

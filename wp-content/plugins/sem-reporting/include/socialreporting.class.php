@@ -9,22 +9,56 @@ class SocialReporting
 	function generate_report()
 	{
 		$client = 'tower';
-		
-		$test_component = GoogleAnalyticsComponent::get_by_client($client);
-		echo '<pre>';
-		print_r($test_component->to_json());
-		echo '</pre>';// . '<br /><br /><br />';
+
+		foreach ( self::get_clients() as $client_name => $client_accounts )
+		{
+			if ( $client_name != 'tower' )
+			{
+				continue;
+			}
+			echo $client_name . ':<br />';
+			$components = array();
+			foreach ( $client_accounts as $client_account )
+			{
+				$component = call_user_func( $client_account . 'Component::get_by_client', $client_name );
+
+				echo '<pre>';
+				print_r($component->to_json());
+				echo '</pre>' . '<br /><br /><br />';
+			}
+		}
 	}
 	
 	private static function get_clients()
 	{
-		$clients = array(
-			'tower'
-			, 'perkypet'
-			, 'lrrcu'
-			, 'continental'
-			, 'townlively'
-			, 'ninjaflex'
+		return array(
+			'tower'	=>	array(
+				'Facebook'
+				, 'GoogleAnalytics'
+				, 'LinkedIn'
+				, 'Twitter'
+				, 'Youtube'
+			)
+			, 'perkypet'	=>	array(
+				'Facebook'
+				, 'Twitter'
+			)
+			, 'lrrcu'	=>	array(
+				'Facebook'
+				, 'GoogleAnalytics'
+				, 'LinkedIn'
+				, 'Twitter'
+				)
+			, 'continental'	=>	array(
+				'Facebook'
+				, 'GoogleAnalytics'
+			)
+			, 'townlively'	=>	array(
+				'Twitter'
+			)
+			, 'ninjaflex'	=>	array(
+				'Twitter'
+			)
 		);
 	}
 	

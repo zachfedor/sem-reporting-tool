@@ -14,7 +14,7 @@ class PinterestComponent extends SimpleComponent
 	
 	public static function get_from_json( $json )
 	{
-		$arr = json_decode( $json );
+		$arr = json_decode( $json, true );
 		
 		return self::get_from_array( $arr );
 	}

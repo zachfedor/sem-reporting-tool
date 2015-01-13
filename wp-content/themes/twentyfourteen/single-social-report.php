@@ -16,37 +16,37 @@ get_header(); ?>
 					
 					if ( isset( $post_meta['wpcf-facebook'] ) )
 					{
-						$facebook_component = FacebookComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-facebook'][0] ) );
+						$facebook_component = FacebookComponent::get_from_json( $post_meta['wpcf-facebook'][0] );
 						echo $facebook_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-google-analytics'] ) )
 					{
-						$google_analytics_component = GoogleAnalyticsComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-google-analytics'][0] ) );
+						$google_analytics_component = GoogleAnalyticsComponent::get_from_json( $post_meta['wpcf-google-analytics'][0] );
 						echo $google_analytics_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-linkedin'] ) )
 					{
-						$linked_in_component = LinkedInComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-linkedin'][0] ) );
+						$linked_in_component = LinkedInComponent::get_from_json( $post_meta['wpcf-linkedin'][0] );
 						echo $linked_in_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-pinterest'] ) )
 					{
-						$pinterest_component = PinterestComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-pinterest'][0] ) );
+						$pinterest_component = PinterestComponent::get_from_json( $post_meta['wpcf-pinterest'][0] );
 						echo $pinterest_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-twitter'] ) )
 					{
-						$twitter_component = TwitterComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-twitter'][0] ) );
+						$twitter_component = TwitterComponent::get_from_json( $post_meta['wpcf-twitter'][0] );
 						echo $twitter_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-youtube'] ) )
 					{
-						$youtube_component = YouTubeComponent::get_from_serialized_array( unserialize( $post_meta['wpcf-youtube'][0] ) );
+						$youtube_component = YouTubeComponent::get_from_json( $post_meta['wpcf-youtube'][0] );
 						echo $youtube_component->to_html();
 					}
 				endwhile;
