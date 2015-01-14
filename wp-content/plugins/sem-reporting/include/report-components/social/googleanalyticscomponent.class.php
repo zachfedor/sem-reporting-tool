@@ -40,7 +40,7 @@ class GoogleAnalyticsComponent extends SimpleComponent
                     <p class="rc-data"><?php echo $this->total_sessions; ?></p>
                 </div>
                 <div class="rc-col rc-col-two">
-                    <h5 class="rc-header">Sessions Via Social Referral</h5>
+                    <h5 class="rc-heading">Sessions Via Social Referral</h5>
                     <p class="rc-data"><?php echo $this->sessions_social_referral; ?></p>
                 </div>
             </div>
