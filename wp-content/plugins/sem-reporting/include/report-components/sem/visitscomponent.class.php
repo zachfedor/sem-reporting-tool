@@ -49,7 +49,7 @@ class VisitsComponent extends SimpleComponent
                         </tr>
                     </table>
 
-                    <div class="rc-piegraph rc-full">
+                    <div class="rc-piegraph rc-full" onload="reportsPieChart();">
                         <?php
                         $pie_slices = count($this->visits);
                         $pie_total = 0;

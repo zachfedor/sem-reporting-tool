@@ -58,6 +58,80 @@
         .single-sem-report .report-component .rc-content .rc-data.rc-data-big, .single-social-report .report-component .rc-content .rc-data.rc-data-big {
           font-size: 150%;
           padding: calc(#padding * 2); }
+      .single-sem-report .report-component .rc-content .rc-piegraph, .single-social-report .report-component .rc-content .rc-piegraph {
+        position: relative; }
+        .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie {
+          position: absolute;
+          width: 100px;
+          height: 200px;
+          overflow: hidden;
+          left: 150px;
+          -moz-transform-origin: left center;
+          -ms-transform-origin: left center;
+          -o-transform-origin: left center;
+          -webkit-transform-origin: left center;
+          transform-origin: left center;
+          /*
+            this is the actual visible part of the pie.
+            Give it the same dimensions as the regular piece.
+            Use border radius make it a half circle.
+            move transform origin to the middle of the right side.
+            Push it out to the left of the containing box.
+          */
+          /*
+            add colour to each piece.
+          */
+          /*
+            unless the piece represents more than 50% of the whole chart.
+            then make it a square, and ensure the transform origin is
+            back in the center.
+
+            NOTE: since this is only ever a single piece, you could
+            move this to a piece specific rule and remove the extra class
+          */ }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            left: -100px;
+            border-radius: 100px 0 0 100px;
+            -moz-transform-origin: right center;
+            -ms-transform-origin: right center;
+            -o-transform-origin: right center;
+            -webkit-transform-origin: right center;
+            transform-origin: right center; }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(1):before, .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(1):after, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(1):before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(1):after {
+            background-color: blue; }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(2):after, .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(2):before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(2):after, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(2):before {
+            background-color: green; }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(3):after, .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(3):before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(3):after, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(3):before {
+            background-color: red; }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(4):after, .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(4):before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(4):after, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie:nth-of-type(4):before {
+            background-color: orange; }
+          .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big {
+            width: 200px;
+            height: 200px;
+            left: 50px;
+            -moz-transform-origin: center center;
+            -ms-transform-origin: center center;
+            -o-transform-origin: center center;
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+            /* if it's part of a big piece, bring it back into the square */
+            /*
+              big pieces will also need a second semicircle, pointed in the
+              opposite direction to hide the first part behind.
+            */ }
+            .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big:before, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big:before {
+              left: 0px; }
+            .single-sem-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big:after, .single-social-report .report-component .rc-content .rc-piegraph .rc-pie.rc-pie-big:after {
+              content: "";
+              position: absolute;
+              width: 100px;
+              height: 200px;
+              left: 100px;
+              border-radius: 0 100px 100px 0; }
       .single-sem-report .report-component .rc-content .rc-table, .single-social-report .report-component .rc-content .rc-table {
         border: none;
         border-collapse: separate;
@@ -67,8 +141,7 @@
         width: 101%;
         width: -webkit-calc(15px * 2 + 100%);
         width: -moz-calc(15px * 2 + 100%);
-        width: calc(15px * 2 + 100%);
-        table-layout: fixed; }
+        width: calc(15px * 2 + 100%); }
         .single-sem-report .report-component .rc-content .rc-table td, .single-sem-report .report-component .rc-content .rc-table th, .single-social-report .report-component .rc-content .rc-table td, .single-social-report .report-component .rc-content .rc-table th {
           padding: 10px;
           text-align: center;
@@ -76,10 +149,7 @@
           vertical-align: middle; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-head, .single-social-report .report-component .rc-content .rc-table .rc-table-head {
           background-color: #000000;
-          color: #ffffff;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap; }
+          color: #ffffff; }
         .single-sem-report .report-component .rc-content .rc-table .rc-table-dark, .single-social-report .report-component .rc-content .rc-table .rc-table-dark {
           background-color: #777777;
           color: #000000; }
@@ -99,7 +169,12 @@
           border-left: 1px solid #000000;
           border-right: 1px solid #000000;
           width: 100%;
-          margin: 0; }
+          margin: 0;
+          table-layout: fixed; }
+          .single-sem-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics thead tr th, .single-social-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics thead tr th {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
           .single-sem-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics tbody tr, .single-social-report .report-component .rc-content .rc-table#tbl-competitor-link-metrics tbody tr {
             border-bottom: 1px solid #000000; }
         @media (max-width: 60em) {
