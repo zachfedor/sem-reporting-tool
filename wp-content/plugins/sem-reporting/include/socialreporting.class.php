@@ -8,8 +8,6 @@ class SocialReporting
 	
 	function generate_report()
 	{
-		$client = 'tower';
-
 		foreach ( self::get_clients() as $client_name => $client_accounts )
 		{
 			if ( $client_name != 'tower' )
@@ -18,11 +16,11 @@ class SocialReporting
 			}
 			echo $client_name . ':<br />';
 			$components = array();
-			foreach ( $client_accounts as $client_account )
+			foreach ( $client_accounts as $component_type )
 			{
-				$component = call_user_func( $client_account . 'Component::get_by_client', $client_name );
+				$component = call_user_func( $component_type . 'Component::get_by_client', $client_name );
 
-				echo '<pre>';
+				echo $component_type . '<pre>';
 				print_r($component->to_json());
 				echo '</pre>' . '<br /><br /><br />';
 			}

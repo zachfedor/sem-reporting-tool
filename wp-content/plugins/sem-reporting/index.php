@@ -9,8 +9,12 @@ Author URI: http://www.towermarketing.net
 */
 
 require_once 'include/socialreporting.class.php';
+require_once 'include/semreporting.class.php';
 require_once 'include/report-components/framework.php';
 require_once 'include/api-classes/framework.php';
 
 $social_reporting = new SocialReporting();
 $social_reporting->init();
+
+$sem_reporting = new SEMReporting();
+$sem_reporting->init();
