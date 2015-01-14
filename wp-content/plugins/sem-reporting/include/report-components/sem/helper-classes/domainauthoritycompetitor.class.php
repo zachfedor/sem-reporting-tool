@@ -13,6 +13,10 @@ class DomainAuthorityCompetitor extends SimpleComponent
 
 	public function get_url()
 	{
+		if ( strpos( $this->url, 'www.') === 0 )
+		{
+			return substr( $this->url, 4 );
+		}
 	    return $this->url;
 	}
 

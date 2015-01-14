@@ -22,7 +22,7 @@ class SEMReporting
 
 				echo $component_type . '<pre>';
 				print_r($component->to_json());
-				echo '</pre>' . '<br /><br /><br />';
+				echo '</pre><br /><br /><br />';
 			}
 		}
 	}

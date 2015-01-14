@@ -14,9 +14,9 @@ class LinkMetrics extends SimpleComponent
 	{
 		if ( strpos( $this->link, 'www.') === 0 )
 		{
-			return substr( $this->link, 5 );
+			return substr( $this->link, 4 );
 		}
-	    return $this->link	;
+	    return $this->link;
 	}
 
 	public function get_metrics()

@@ -68,4 +68,33 @@ class SimpleComponent
 
 		return $html;
 	}
+
+	public function get_previous_months( $post_title, $num_months, $post_type, $post_meta_slug )
+	{
+		$previous_month_components = array();
+
+		for ( $i = 0; $i < $num_months; $i++ )
+		{
+			$pieces = explode( ' ', $post_title );
+			$year = array_pop( $pieces );
+			$month = array_pop( $pieces );
+			$post_date = $month . ' ' . $year;
+
+			$post_title_no_date = implode( ' ', $pieces );
+
+			$post_title = $post_title_no_date . ' ' . date( 'F Y', strtotime( $post_date . ' - 1 month' ) );
+			$previous_post = get_page_by_title( $post_title, 'ARRAY_A', $post_type );
+
+			$previous_post_meta = get_post_meta( $previous_post['ID'] );
+
+			$previous_month_components[] = call_user_func( get_class( $this ) . '::get_from_json', $previous_post_meta[$post_meta_slug][0] );
+		}
+
+		return $previous_month_components;
+	}
+
+	public function get_previous_month_component( $num_months_back=1 )
+	{
+		return $this->previous_month_components[ --$num_months_back ];
+	}
 }

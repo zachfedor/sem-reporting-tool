@@ -41,6 +41,7 @@ get_header(); ?>
 					if ( isset( $post_meta['wpcf-twitter'] ) )
 					{
 						$twitter_component = TwitterComponent::get_from_json( $post_meta['wpcf-twitter'][0] );
+						$twitter_component->get_historical_data( get_the_title() );
 						echo $twitter_component->to_html();
 					}
 					

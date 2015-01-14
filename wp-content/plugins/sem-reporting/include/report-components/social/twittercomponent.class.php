@@ -26,6 +26,11 @@ class TwitterComponent extends SimpleComponent
 	{
 		return new self( $arr['total_followers'], $arr['total_following'] );
 	}
+
+	function get_historical_data( $post_title, $num_months=2 )
+	{
+		$this->previous_month_components = $this->get_previous_months( $post_title, $num_months, 'social-report', 'wpcf-twitter' );
+	}
 	
 	public function to_html()
 	{
@@ -51,13 +56,13 @@ class TwitterComponent extends SimpleComponent
                             </tr>
                             <tr>
                                 <td class="rc-table-dark">Last Month</td>
-                                <td class="rc-table-light"></td>
-                                <td class="rc-table-light"></td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_total_followers(); ?></td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_total_following(); ?></td>
                             </tr>
                             <tr>
                                 <td class="rc-table-dark">2 Months Ago</td>
-                                <td class="rc-table-light"></td>
-                                <td class="rc-table-light"></td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_total_followers(); ?></td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_total_following(); ?></td>
                             </tr>
                         </tbody>
                     </table>

@@ -19,12 +19,14 @@ get_header(); ?>
 					if ( isset( $post_meta['wpcf-domain-authority'] ) )
 					{
 						$domain_authority_component = DomainAuthorityComponent::get_from_json( $post_meta['wpcf-domain-authority'][0] );
+						$domain_authority_component->get_historical_data( get_the_title() );
 						echo $domain_authority_component->to_html();
 					}
 					
 					if ( isset( $post_meta['wpcf-other-information'] ) )
 					{
 						$other_info_component = OtherInfoComponent::get_from_json( $post_meta['wpcf-other-information'][0] );
+						$other_info_component->get_historical_data( get_the_title() );
 						echo $other_info_component->to_html();
 					}
 					

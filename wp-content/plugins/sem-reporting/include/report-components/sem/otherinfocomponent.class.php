@@ -28,6 +28,11 @@ class OtherInfoComponent extends SimpleComponent
 	{
 		return new self( $arr['sessions'], $arr['pages_per_session'], $arr['average_session_duration'], $arr['bounce_rate'] );
 	}
+
+    function get_historical_data( $post_title, $num_months=2 )
+    {
+        $this->previous_month_components = $this->get_previous_months( $post_title, $num_months, 'sem-report', 'wpcf-other-information' );
+    }
 	
 	public function to_html()
 	{
@@ -46,11 +51,11 @@ class OtherInfoComponent extends SimpleComponent
                         <table class="rc-table">
                             <tr>
                                 <th class="rc-table-head">3 Months Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_sessions(); ?></td>
                             </tr>
                             <tr>
                                 <th class="rc-table-head">One Year Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_sessions(); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -67,11 +72,11 @@ class OtherInfoComponent extends SimpleComponent
                         <table class="rc-table">
                             <tr>
                                 <th class="rc-table-head">3 Months Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_average_session_duration(); ?></td>
                             </tr>
                             <tr>
                                 <th class="rc-table-head">One Year Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_average_session_duration(); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -88,11 +93,11 @@ class OtherInfoComponent extends SimpleComponent
                         <table class="rc-table">
                             <tr>
                                 <th class="rc-table-head">3 Months Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_pages_per_session(); ?></td>
                             </tr>
                             <tr>
                                 <th class="rc-table-head">One Year Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_pages_per_session(); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -109,11 +114,11 @@ class OtherInfoComponent extends SimpleComponent
                         <table class="rc-table">
                             <tr>
                                 <th class="rc-table-head">3 Months Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 1 )->get_bounce_rate(); ?></td>
                             </tr>
                             <tr>
                                 <th class="rc-table-head">One Year Ago</th>
-                                <td class="rc-table-light">xxx</td>
+                                <td class="rc-table-light"><?php echo $this->get_previous_month_component( 2 )->get_bounce_rate(); ?></td>
                             </tr>
                         </table>
                     </div>

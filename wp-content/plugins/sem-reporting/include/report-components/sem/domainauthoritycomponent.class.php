@@ -32,6 +32,11 @@ class DomainAuthorityComponent extends SimpleComponent
 		
 		return new self( $arr['domain_authority'], $domain_authority_competitors );
 	}
+
+	function get_historical_data( $post_title, $num_months=12 )
+	{
+		$this->previous_month_components = $this->get_previous_months( $post_title, 2, 'sem-report', 'wpcf-domain-authority' );
+	}
 	
 	public function to_html()
 	{
@@ -64,9 +69,9 @@ class DomainAuthorityComponent extends SimpleComponent
                 <div class="rc-col rc-col-two">
                     <h4 class="rc-subtitle">Domain Authority History</h4>
                     <h5 class="rc-heading">3 Months Ago</h5>
-                    <p class="rc-data rc-data-big">xxx</p>
+                    <p class="rc-data rc-data-big"><?php echo $this->get_previous_month_component( 2 )->get_domain_authority(); ?></p>
                     <h5 class="rc-heading">One Year Ago</h5>
-                    <p class="rc-data rc-data-big">xxx</p>
+                    <p class="rc-data rc-data-big"><?php echo $this->get_previous_month_component( 2 )->get_domain_authority(); ?></p>
                 </div>
             </div>
 		</div>
