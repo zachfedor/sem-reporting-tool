@@ -3,7 +3,7 @@ class SocialReporting
 {
 	public function init()
 	{	
-		add_shortcode( 'report_tests', array( $this, 'generate_report' ) );
+		add_shortcode( 'social_report_tests', array( $this, 'generate_report' ) );
 	}
 	
 	function generate_report()
@@ -12,13 +12,14 @@ class SocialReporting
 		{
 			if ( $client_name != 'tower' )
 			{
-				continue;
+				//continue;
 			}
 			echo $client_name . ':<br />';
 			$components = array();
 			foreach ( $client_accounts as $component_type )
 			{
 				$component = call_user_func( $component_type . 'Component::get_by_client', $client_name );
+				$components[] = $component;
 
 				echo $component_type . '<pre>';
 				print_r($component->to_json());
@@ -44,7 +45,7 @@ class SocialReporting
 			, 'lrrcu'	=>	array(
 				'Facebook'
 				, 'GoogleAnalytics'
-				, 'LinkedIn'
+				//, 'LinkedIn'
 				, 'Twitter'
 				)
 			, 'continental'	=>	array(
@@ -52,7 +53,7 @@ class SocialReporting
 				, 'GoogleAnalytics'
 			)
 			, 'townlively'	=>	array(
-				'Twitter'
+				//'Twitter'
 			)
 			, 'ninjaflex'	=>	array(
 				'Twitter'

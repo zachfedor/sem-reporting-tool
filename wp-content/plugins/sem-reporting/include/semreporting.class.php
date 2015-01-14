@@ -3,7 +3,7 @@ class SEMReporting
 {
 	public function init()
 	{
-		add_shortcode( 'report_tests', array( $this, 'generate_report' ) );
+		add_shortcode( 'sem_report_tests', array( $this, 'generate_report' ) );
 	}
 	
 	function generate_report()
@@ -12,7 +12,7 @@ class SEMReporting
 		{
 			if ( $client_name != 'tower' )
 			{
-				continue;
+				//continue;
 			}
 			echo $client_name . ':<br />';
 			$components = array();
@@ -54,13 +54,6 @@ class SEMReporting
 				, 'OtherInfo'
 				, 'Visits'
 			)
-		);
-
-		$clients = array(
-			'tower'
-			, 'fairmount'
-			, 'lrrcu'
-			, 'countrymeadows'
 		);
 	}
 	
