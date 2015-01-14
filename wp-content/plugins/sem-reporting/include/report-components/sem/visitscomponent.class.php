@@ -41,7 +41,7 @@ class VisitsComponent extends SimpleComponent
             <h3 class="rc-title rc-full">Visits</h3>
 
             <div class="rc-content">
-                <div class="rc-col rc-col-one">
+                <div class="rc-col rc-col-one rc-col-border">
                     <table class="rc-table">
                         <tr>
                             <th class="rc-table-head">Total Visits</th>
@@ -49,7 +49,12 @@ class VisitsComponent extends SimpleComponent
                         </tr>
                     </table>
 
-                    <div class="rc-piegraph rc-full" onload="reportsPieChart();">
+                    <div class="rc-piegraph">
+
+                        <div id="canvas-holder">
+                            <canvas id="chart-area" width="250" height="250" />
+                        </div>
+
                         <?php
                         $pie_slices = count($this->visits);
                         $pie_total = 0;
@@ -59,27 +64,36 @@ class VisitsComponent extends SimpleComponent
                             $pie_total += $visit_type->get_num_visits();
                         }
 
-                        $pie_slice_origin = 0;
-
-                        for($i = 0; $i < $pie_slices; $i++) {
-                            $pie_slice_percent = $visit_breakdown[$i] / $pie_total;
-                            $pie_slice_degrees = $pie_slice_percent * 360;
-                            ?>
-                            <div data-start="<?php echo $pie_slice_origin; ?>" data-value="<?php echo $pie_slice_degrees; ?>" class="<?php
-                            if ($pie_slice_degrees >= 180) {
-                                echo "rc-pie rc-pie-big";
-                            } else {
-                                echo "rc-pie";
-                            }
-                            ?>" style="-moz-transform: rotate(<?php echo $pie_slice_degrees ?>deg);
-                                -ms-transform: rotate(<?php echo $pie_slice_degrees ?>deg);
-                                -webkit-transform: rotate(<?php echo $pie_slice_degrees ?>deg);
-                                -o-transform: rotate(<?php echo $pie_slice_degrees ?>deg);
-                                transform:rotate(<?php echo $pie_slice_degrees ?>deg);"></div>
-                            <?php
-                            $pie_slice_origin += $pie_slice_degrees;
-                        }
                         ?>
+
+                        <script>
+
+                            var pieData = [
+                                <?php
+                                    $pie_colors = array('#C3D500','#00a0d5','#ffb553','#d50000','#949fb2','#ffb800','#634aa6');
+                                    $numItems = count($this->visits);
+                                    $i = 0;
+                                    foreach ( $this->visits as $slice ) {
+                                        echo "{";
+                                        echo "value: " . $slice->get_num_visits() . ",";
+                                        echo 'color: "' . $pie_colors[$i] . '",';
+                                        echo 'highlight: "' . $pie_colors[$i] . '",';
+                                        echo 'label: "' . $slice->get_type() . '"';
+
+                                        if(++$i === $numItems) {
+                                            echo "}";
+                                        } else {
+                                            echo "},";
+                                        }
+                                    }
+                                ?>
+                            ];
+
+                            window.onload = function(){
+                                var ctx = document.getElementById("chart-area").getContext("2d");
+                                window.myPie = new Chart(ctx).Pie(pieData);
+                            };
+                        </script>
 
                     </div>
                 </div>
@@ -92,12 +106,17 @@ class VisitsComponent extends SimpleComponent
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ( $this->visits as $visit_type ) { ?>
+                        <?php
+                        $i = 0;
+
+                        foreach ( $this->visits as $visit_type ) { ?>
                         <tr>
-                            <td class="rc-table-dark"><?php echo ucfirst( $visit_type->get_type() ); ?></td>
+                            <td class="rc-table-dark" style="background-color: <?php echo $pie_colors[$i] ?>;"><?php echo ucfirst( $visit_type->get_type() ); ?></td>
                             <td class="rc-table-light"><?php echo $visit_type->get_num_visits(); ?></td>
                         </tr>
-                        <?php } ?>
+                        <?php
+                        $i++;
+                        } ?>
                     </tbody>
                     </table>
                 </div>

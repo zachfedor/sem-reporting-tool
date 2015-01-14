@@ -43,7 +43,7 @@ class OtherInfoComponent extends SimpleComponent
 
             <div class="rc-content">
                 <div class="rc-clear">
-                    <div class="rc-col rc-col-one">
+                    <div class="rc-col rc-col-one rc-col-border">
                         <h5 class="rc-heading">Sessions / Visits</h5>
                         <p class="rc-data"><?php echo $this->sessions; ?></p>
                     </div>
@@ -64,7 +64,7 @@ class OtherInfoComponent extends SimpleComponent
                 <hr/>
 
                 <div class="rc-clear">
-                    <div class="rc-col rc-col-one">
+                    <div class="rc-col rc-col-one rc-col-border">
                         <h5 class="rc-heading">Avg. Session Duration:</h5>
                         <p class="rc-data"><?php echo $this->average_session_duration; ?></p>
                     </div>
@@ -85,7 +85,7 @@ class OtherInfoComponent extends SimpleComponent
                 <hr/>
 
                 <div class="rc-clear">
-                    <div class="rc-col rc-col-one">
+                    <div class="rc-col rc-col-one rc-col-border">
                         <h5 class="rc-heading">Pages / Session:</h5>
                         <p class="rc-data"><?php echo $this->pages_per_session; ?></p>
                     </div>
@@ -106,7 +106,7 @@ class OtherInfoComponent extends SimpleComponent
                 <hr/>
 
                 <div class="rc-clear">
-                    <div class="rc-col rc-col-one">
+                    <div class="rc-col rc-col-one rc-col-border">
                         <h5 class="rc-heading">Bounce Rate:</h5>
                         <p class="rc-data"><?php echo $this->bounce_rate; ?>%</p>
                     </div>

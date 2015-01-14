@@ -11,7 +11,7 @@
             <h5 class="rc-heading">Total Reach</h5>
             <p class="rc-data"><?php echo $this->total_reach; ?></p>
         </div>
-        <div class="rc-col rc-col-two">
+        <div class="rc-col rc-col-two rc-col-border">
             <h4 class="rc-subtitle">Reach Breakdown</h4>
             <table id="tbl-facebook-reach-breakdown" class="rc-table">
                 <thead>

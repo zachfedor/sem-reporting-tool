@@ -35,12 +35,12 @@ class GoogleAnalyticsComponent extends SimpleComponent
 			<h3 class="rc-title rc-full">Google Analytics</h3>
 
             <div class="rc-content">
-                <div class="rc-col rc-col-one">
+                <div class="rc-col rc-col-one rc-col-border">
                     <h5 class="rc-heading">Total Sessions</h5>
                     <p class="rc-data"><?php echo $this->total_sessions; ?></p>
                 </div>
                 <div class="rc-col rc-col-two">
-                    <h5 class="rc-header">Sessions Via Social Referral</h5>
+                    <h5 class="rc-heading">Sessions Via Social Referral</h5>
                     <p class="rc-data"><?php echo $this->sessions_social_referral; ?></p>
                 </div>
             </div>
