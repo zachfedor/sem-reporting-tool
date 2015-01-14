@@ -18,18 +18,18 @@ $break: 60em;
   .report-component {
     width: 65%;
     min-width: 300px;
-    margin: $spacer auto;
-
-    &:hover {
-      .rc-content {
-//        max-height: 2500px;
-      }
-    }
+    margin: 0 auto $spacer;
+    border-bottom: 1px solid $lgrey;
 
     .rc-title {
       padding: $padding;
       background-color: $accent;
       color: $text2;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     .rc-full {
@@ -37,14 +37,19 @@ $break: 60em;
     }
 
     .rc-content {
-      border-bottom: 1px solid $lgrey;
-      margin-bottom: calc(2 * #{$spacer});
-//      overflow: hidden;
-//      max-height: 0px;
-      transition: max-height 2s;
-      -moz-transition: max-height 2s; /* Firefox 4 */
-      -webkit-transition: max-height 2s; /* Safari and Chrome */
-      -o-transition: max-height 2s; /* Opera */
+      background-color: #ffffff;
+      max-height: 2500px;
+      opacity: 1;
+      transition: max-height 2s, opacity 2s;
+      -moz-transition: max-height 2s, opacity 2s; /* Firefox 4 */
+      -webkit-transition: max-height 2s, opacity 2s; /* Safari and Chrome */
+      -o-transition: max-height 2s opacity 2s; /* Opera */
+
+      &.rc-hidden {
+        overflow: hidden;
+        max-height: 0px;
+        opacity: 0;
+      }
 
       .rc-col {
         width: 50%;
