@@ -46,7 +46,7 @@ class LinkedInComponent extends SimpleComponent
 			<h3 class="rc-title rc-full">LinkedIn</h3>
 
             <div class="rc-content">
-                <div class="rc-col rc-col-one">
+                <div class="rc-col rc-col-one rc-col-border">
                     <h5 class="rc-heading">Total Followers</h5>
                     <p class="rc-data"><?php echo $this->total_followers; ?></p>
                     <h5 class="rc-heading">New Followers</h5>

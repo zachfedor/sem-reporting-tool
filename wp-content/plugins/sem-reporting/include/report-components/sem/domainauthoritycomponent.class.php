@@ -41,7 +41,7 @@ class DomainAuthorityComponent extends SimpleComponent
 			<h3 class="rc-title rc-full">Domain Authority</h3>
 
             <div class="rc-content">
-                <div id="dv-domain-authority" class="rc-col rc-col-one">
+                <div id="dv-domain-authority" class="rc-col rc-col-one rc-col-border">
                     <h5 class="rc-heading">Your Domain Authority</h5>
                     <p class="rc-data rc-data-big rc-data-accent"><?php echo $this->domain_authority; ?></p>
 

@@ -35,7 +35,7 @@ class GoogleAnalyticsComponent extends SimpleComponent
 			<h3 class="rc-title rc-full">Google Analytics</h3>
 
             <div class="rc-content">
-                <div class="rc-col rc-col-one">
+                <div class="rc-col rc-col-one rc-col-border">
                     <h5 class="rc-heading">Total Sessions</h5>
                     <p class="rc-data"><?php echo $this->total_sessions; ?></p>
                 </div>
