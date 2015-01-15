@@ -24,5 +24,7 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
+
+<script src="<?php echo get_template_directory_uri(); ?>/js/reports.js"></script>
 </body>
 </html>

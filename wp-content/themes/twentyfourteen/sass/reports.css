@@ -4,23 +4,32 @@
   .single-sem-report .report-component, .single-social-report .report-component {
     width: 65%;
     min-width: 300px;
-    margin: 2rem auto; }
+    margin: 0 auto 2rem;
+    border-bottom: 1px solid #bbbbbb; }
     .single-sem-report .report-component .rc-title, .single-social-report .report-component .rc-title {
       padding: 10px;
       background-color: #C3D500;
-      color: #ffffff; }
+      color: #ffffff;
+      cursor: pointer; }
+      .single-sem-report .report-component .rc-title:hover, .single-social-report .report-component .rc-title:hover {
+        opacity: 0.8; }
     .single-sem-report .report-component .rc-full, .single-social-report .report-component .rc-full {
       margin-bottom: 2rem; }
     .single-sem-report .report-component .rc-content, .single-social-report .report-component .rc-content {
-      border-bottom: 1px solid #bbbbbb;
-      margin-bottom: calc(2 * 2rem);
-      transition: max-height 2s;
-      -moz-transition: max-height 2s;
+      background-color: #ffffff;
+      max-height: 2500px;
+      opacity: 1;
+      transition: max-height 2s, opacity 2s;
+      -moz-transition: max-height 2s, opacity 2s;
       /* Firefox 4 */
-      -webkit-transition: max-height 2s;
+      -webkit-transition: max-height 2s, opacity 2s;
       /* Safari and Chrome */
-      -o-transition: max-height 2s;
+      -o-transition: max-height 2s opacity 2s;
       /* Opera */ }
+      .single-sem-report .report-component .rc-content.rc-hidden, .single-social-report .report-component .rc-content.rc-hidden {
+        overflow: hidden;
+        max-height: 0px;
+        opacity: 0; }
       .single-sem-report .report-component .rc-content .rc-col, .single-social-report .report-component .rc-content .rc-col {
         width: 50%;
         float: left;
