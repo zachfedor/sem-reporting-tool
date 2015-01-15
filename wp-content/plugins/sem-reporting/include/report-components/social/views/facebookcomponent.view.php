@@ -1,7 +1,7 @@
 <div id="dv-facebook-component" class="report-component">
     <h3 class="rc-title rc-full">Facebook</h3>
 
-    <div class="rc-content">
+    <div class="rc-content rc-content-tall">
         <div class="rc-col rc-col-one">
 
             <h4 class="rc-subtitle">Totals</h4>
