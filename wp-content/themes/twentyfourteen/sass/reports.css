@@ -10,14 +10,30 @@
       padding: 10px;
       background-color: #C3D500;
       color: #ffffff;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative;
+      transition: opacity 0.4s; }
+      .single-sem-report .report-component .rc-title:after, .single-social-report .report-component .rc-title:after {
+        content: " ";
+        background: url("../images/ready-to-chat-arrows.png") no-repeat scroll 0px -11px transparent;
+        position: absolute;
+        right: 25px;
+        top: 16px;
+        width: 28px;
+        height: 12px;
+        opacity: 0;
+        transition: opacity 0.4s; }
       .single-sem-report .report-component .rc-title:hover, .single-social-report .report-component .rc-title:hover {
         opacity: 0.8; }
+        .single-sem-report .report-component .rc-title:hover:after, .single-social-report .report-component .rc-title:hover:after {
+          opacity: 1; }
+      .single-sem-report .report-component .rc-title.rc-title-open:after, .single-social-report .report-component .rc-title.rc-title-open:after {
+        background-position: 0px 0px; }
     .single-sem-report .report-component .rc-full, .single-social-report .report-component .rc-full {
       margin-bottom: 2rem; }
     .single-sem-report .report-component .rc-content, .single-social-report .report-component .rc-content {
       background-color: #ffffff;
-      max-height: 2500px;
+      max-height: 1000px;
       opacity: 1;
       transition: max-height 2s, opacity 2s;
       -moz-transition: max-height 2s, opacity 2s;
@@ -26,6 +42,8 @@
       /* Safari and Chrome */
       -o-transition: max-height 2s opacity 2s;
       /* Opera */ }
+      .single-sem-report .report-component .rc-content.rc-content-tall, .single-social-report .report-component .rc-content.rc-content-tall {
+        max-height: 2500px; }
       .single-sem-report .report-component .rc-content.rc-hidden, .single-social-report .report-component .rc-content.rc-hidden {
         overflow: hidden;
         max-height: 0px;

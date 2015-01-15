@@ -26,10 +26,35 @@ $break: 60em;
       background-color: $accent;
       color: $text2;
       cursor: pointer;
+      position: relative;
+      transition: opacity 0.4s;
+
+      &:after {
+        content: " ";
+        background: url('../images/ready-to-chat-arrows.png') no-repeat scroll 0px -11px transparent;
+        position: absolute;
+        right: 25px;
+        top: 16px;
+        width: 28px;
+        height: 12px;
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
 
       &:hover {
         opacity: 0.8;
+
+        &:after {
+          opacity: 1;
+        }
       }
+
+      &.rc-title-open {
+        &:after {
+          background-position: 0px 0px;
+        }
+      }
+
     }
 
     .rc-full {
@@ -38,12 +63,16 @@ $break: 60em;
 
     .rc-content {
       background-color: #ffffff;
-      max-height: 2500px;
+      max-height: 1000px;
       opacity: 1;
       transition: max-height 2s, opacity 2s;
       -moz-transition: max-height 2s, opacity 2s; /* Firefox 4 */
       -webkit-transition: max-height 2s, opacity 2s; /* Safari and Chrome */
       -o-transition: max-height 2s opacity 2s; /* Opera */
+
+      &.rc-content-tall {
+        max-height: 2500px;
+      }
 
       &.rc-hidden {
         overflow: hidden;
